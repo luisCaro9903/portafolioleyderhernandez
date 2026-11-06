@@ -1,0 +1,1023 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Leyder Hernández · Diseñador gráfico</title>
+<meta name="description" content="Leyder Hernández, diseñador gráfico en Barranquilla. Identidad visual, campañas, diseño editorial y sistemas visuales, con IA integrada al proceso.">
+<meta name="author" content="Leyder Hernández Cervantes">
+<meta name="theme-color" content="#151515">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Leyder Hernández · Diseñador gráfico">
+<meta property="og:description" content="De la idea a cada formato. Identidad, campañas y diseño editorial.">
+<meta property="og:image" content="assets/img/carnaval-2026-00-2000.jpg">
+<meta property="og:locale" content="es_CO">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 104 104'%3E%3Crect width='104' height='104' rx='20' fill='%23151515'/%3E%3Cg transform='translate(14 14) scale(.73)' fill='%23F1F0EC'%3E%3Cpath d='M61.99 10.69A42.5 42.5 0 0 1 54 94.45M50 94.45A42.5 42.5 0 0 1 43.02 10.46' fill='none' stroke='%23F1F0EC' stroke-width='13'/%3E%3Crect x='46' y='3' width='13' height='83'/%3E%3Crect x='46' y='44' width='40' height='11'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="preload" as="image" href="assets/img/carnaval-2026-00-2000.jpg" media="(min-width:701px)">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Leyder Hernández Cervantes","jobTitle":"Diseñador gráfico","email":"mailto:leyderh3@gmail.com","telephone":"+57 302 315 8677","address":{"@type":"PostalAddress","addressLocality":"Barranquilla","addressCountry":"CO"},"knowsAbout":["Identidad visual","Dirección de arte","Campañas","Diseño editorial","Ilustración","IA aplicada al diseño"]}
+</script>
+<style>
+/* Layout: estudio a oscuras como su logo. Marco monocromo, el color lo pone el trabajo de cada caso. Retícula de 12 columnas, filetes de 1px, el monograma como ventana. */
+:root{
+  color-scheme:dark;
+  --bg:#151515; --bg-2:#1D1D1C; --fg:#F1F0EC; --mute:#8F8E88; --line:#2B2B2A; --line-2:#3B3B39;
+  --paper:#ECEBE6; --ink:#151515; --ink-mute:#5F5E59; --ink-line:#CFCEC8;
+  --c:#F1F0EC; --cb:#1D1D1C;
+  --f:"Archivo","Helvetica Neue",Arial,system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --wrap:1400px; --g:20px; --ease:cubic-bezier(.2,.75,.15,1); --ease-io:cubic-bezier(.65,0,.35,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+html,body{overflow-x:clip}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--f);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--bg)}
+a{color:inherit}
+img{display:block;max-width:100%;height:auto}
+figure{margin:0}
+button{font:inherit;color:inherit}
+:focus-visible{outline:1.5px solid var(--fg);outline-offset:4px}
+::selection{background:var(--fg);color:var(--bg)}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+@media (min-width:800px){.wrap{padding-left:max(48px,env(safe-area-inset-left,0px));padding-right:max(48px,env(safe-area-inset-right,0px))}}
+.g12{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--g)}
+.mono{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;line-height:1.5}
+.mute{color:var(--mute)}
+h1,h2,h3,h4{margin:0;font-weight:600;text-wrap:balance}
+p{margin:0}
+.skip{position:fixed;left:16px;top:-60px;z-index:50;background:var(--fg);color:var(--bg);padding:10px 14px;text-decoration:none;font-size:14px}
+.skip:focus{top:calc(env(safe-area-inset-top,0px) + 12px)}
+
+/* Ring number: the monogram ring with its two cuts, a number inside */
+.rn{position:relative;display:inline-grid;place-items:center;width:44px;height:44px;flex:0 0 auto;color:var(--c)}
+.rn svg{position:absolute;inset:0;width:100%;height:100%}
+.rn b{font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.02em;color:var(--fg)}
+
+/* Header */
+.top{position:fixed;inset:0 0 auto;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 84%,transparent);backdrop-filter:saturate(1.2) blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.top .wrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:20px;padding-block:13px}
+.id{display:flex;align-items:center;gap:12px;text-decoration:none;min-width:0}
+.id svg{width:26px;height:26px;flex:0 0 auto}
+.id b{font-weight:600;font-size:15px;white-space:nowrap}
+.id .now{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:0;opacity:0;transition:max-width .6s var(--ease),opacity .4s}
+.top.in-case .id .now{max-width:340px;opacity:1}
+.nav{display:flex;gap:26px}
+.nav a{text-decoration:none;font-size:14px;color:var(--mute);transition:color .2s}
+.nav a:hover,.nav a[aria-current="true"]{color:var(--fg)}
+.top-r{display:flex;justify-content:flex-end;align-items:center;gap:18px}
+.prog{position:absolute;left:0;right:0;bottom:-1px;height:2px;background:var(--c);transform-origin:0 50%;transform:scaleX(0);transition:background .4s}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:11px 18px;border-radius:999px;border:1px solid var(--fg);background:var(--fg);color:var(--bg);font-size:14px;font-weight:500;text-decoration:none;cursor:pointer;transition:background .25s,color .25s,border-color .25s}
+.btn:hover{background:transparent;color:var(--fg)}
+.btn.line{background:transparent;color:var(--fg);border-color:var(--line-2)}
+.btn.line:hover{border-color:var(--fg)}
+@media (max-width:980px){.nav,.top-r .clock{display:none}.top .wrap{grid-template-columns:1fr auto}}
+
+/* HERO: name lockup; the monogram counter is a window that opens onto case 01 */
+.scene{position:relative;height:250vh;height:250svh}
+.pin{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
+.win{position:absolute;inset:0;z-index:1;clip-path:circle(0px at 50% 50%);will-change:clip-path}
+.win picture,.win img{width:100%;height:100%}
+.win img{object-fit:cover;object-position:22% 50%;transform:scale(var(--ws,1.18));will-change:transform}
+.win::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.55),transparent 38%);opacity:var(--capo,0)}
+.hero-ui{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:clamp(20px,3.4vw,44px);padding-top:84px;will-change:opacity,transform;pointer-events:none}
+.hero-ui a,.hero-ui button{pointer-events:auto}
+.hmeta{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px 24px;padding-bottom:clamp(18px,2.4vw,28px);border-bottom:1px solid var(--line);margin-bottom:clamp(14px,2vw,26px)}
+.lock{font-size:clamp(50px,15.4vw,236px);line-height:.84;letter-spacing:-.048em;font-weight:600;font-stretch:96%}
+.lock .l1,.lock .l2{display:flex;align-items:center}
+.lock .l2{gap:.13em;margin-top:.05em}
+.lock .ln{display:block;overflow:hidden;padding-bottom:.07em;margin-bottom:-.07em}
+.lock .ln>span{display:block;animation:rise 1.15s var(--ease) both}
+.lock .l2 .ln>span{animation-delay:.1s}
+@keyframes rise{from{transform:translateY(108%)}}
+.mk{width:.74em;height:.74em;flex:0 0 auto;overflow:visible}
+.mk .ring{fill:none;stroke:currentColor;stroke-width:13;stroke-dasharray:140;animation:draw 1.4s .3s var(--ease) both}
+.mk .bar{fill:currentColor;transform-box:fill-box;transform-origin:50% 0;animation:gy .7s 1s var(--ease) both}
+.mk .cross{fill:currentColor;transform-box:fill-box;transform-origin:0 50%;animation:gx .6s 1.35s var(--ease) both}
+@keyframes draw{from{stroke-dashoffset:140}}
+@keyframes gy{from{transform:scaleY(0)}}
+@keyframes gx{from{transform:scaleX(0)}}
+.hfoot{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--g);margin-top:clamp(18px,2.6vw,36px);align-items:end}
+.hfoot .pos{grid-column:1/span 5;font-size:clamp(26px,2.9vw,44px);line-height:1.02;letter-spacing:-.03em;font-weight:500}
+.hfoot .sub{grid-column:7/span 4;font-size:clamp(15px,1.25vw,18px);line-height:1.45;color:var(--mute);max-width:42ch}
+.hfoot .scroll{grid-column:11/span 2;justify-self:end;display:flex;align-items:center;gap:10px}
+.scroll i{display:block;width:1px;height:38px;background:var(--line-2);position:relative;overflow:hidden}
+.scroll i::after{content:"";position:absolute;left:0;right:0;top:-40%;height:40%;background:var(--fg);animation:drip 2.2s var(--ease-io) infinite}
+@keyframes drip{to{top:100%}}
+@media (max-width:900px){.hfoot .pos,.hfoot .sub{grid-column:1/-1}.hfoot .scroll{display:none}.hmeta .hide-s{display:none}}
+.wcap{position:absolute;z-index:3;left:0;right:0;bottom:0;opacity:var(--capo,0);transform:translateY(calc((1 - var(--capo,0)) * 16px));pointer-events:none}
+.wcap .wrap{display:flex;justify-content:space-between;align-items:end;gap:20px;padding-bottom:clamp(20px,3vw,40px)}
+.wcap b{font-size:clamp(26px,3.4vw,52px);font-weight:600;letter-spacing:-.03em;line-height:1}
+.motion-off .scene{height:auto}
+.motion-off .pin{position:relative;height:auto;overflow:visible}
+.motion-off .hero-ui{position:relative;padding-top:120px}
+.motion-off .win{position:relative;clip-path:none;aspect-ratio:2.1/1;margin-top:28px}
+.motion-off .win img{transform:none}
+.motion-off .wcap{--capo:1}
+@media (prefers-reduced-motion:reduce){.lock .ln>span,.mk .ring,.mk .bar,.mk .cross,.scroll i::after{animation:none}}
+
+/* Sections */
+.sec{padding-block:clamp(88px,12vw,180px) 0}
+.head{margin-bottom:clamp(36px,5vw,72px);align-items:end}
+.head .k{grid-column:span 3;display:flex;align-items:center;gap:14px}
+.head h2{grid-column:span 6;font-size:clamp(40px,5.8vw,90px);line-height:.95;letter-spacing:-.038em;font-stretch:96%}
+.head p{grid-column:span 3;color:var(--mute);font-size:15.5px}
+@media (max-width:900px){.head .k,.head h2,.head p{grid-column:1/-1}}
+.rule{height:1px;background:var(--line);transform-origin:0 50%}
+.js .rule{transform:scaleX(0);transition:transform 1.2s var(--ease)}
+.js .rule.in{transform:none}
+
+/* Reveal (always visible; only settles into place) */
+.js .rv{transform:translateY(26px);transition:transform 1.1s var(--ease)}
+.js .rv.in{transform:none}
+.js .ri img{transform:scale(1.07);transition:transform 1.6s var(--ease)}
+.js .ri.in img{transform:none}
+@media (prefers-reduced-motion:reduce){.js .rv,.js .ri img,.js .rule{transform:none!important;transition:none}}
+
+/* CASE STUDIES */
+.case{--c:#F1F0EC;--cb:#1D1D1C;position:relative}
+.case + .case{margin-top:clamp(120px,14vw,220px)}
+.c-cover{position:relative;overflow:hidden;background:var(--bg-2)}
+.c-cover img{width:100%;height:min(88vh,62vw);object-fit:cover}
+.c-title{padding-top:clamp(36px,5vw,72px)}
+.c-title .k{grid-column:1/span 3;display:flex;gap:14px;align-items:center;align-self:start;padding-top:.6vw}
+.c-title h2{grid-column:4/span 9;font-size:clamp(46px,8.2vw,132px);line-height:.88;letter-spacing:-.05em;font-stretch:94%}
+.c-meta{margin-top:clamp(32px,4vw,56px);border-top:1px solid var(--line)}
+.c-meta div{grid-column:span 3;padding-top:16px;display:flex;flex-direction:column;gap:6px}
+.c-meta dd{margin:0;font-size:15px;line-height:1.45}
+.c-meta dt{color:var(--mute)}
+@media (max-width:900px){.c-title .k,.c-title h2{grid-column:1/-1}.c-meta div{grid-column:span 6}}
+.c-txt{margin-top:clamp(56px,7vw,112px)}
+.c-txt .lbl{grid-column:1/span 3}
+.c-txt .body{grid-column:4/span 5;font-size:clamp(18px,1.55vw,22px);line-height:1.5}
+.c-txt .body+.aside{grid-column:10/span 3;color:var(--mute);font-size:15px}
+@media (max-width:900px){.c-txt .lbl,.c-txt .body,.c-txt .aside{grid-column:1/-1!important}}
+.quote{margin-top:clamp(64px,8vw,128px)}
+.quote .lbl{grid-column:1/span 3}
+.quote blockquote{grid-column:4/span 9;margin:0;font-size:clamp(34px,5vw,80px);line-height:1;letter-spacing:-.04em;font-weight:500}
+.quote blockquote em{font-style:normal;color:var(--c)}
+.quote cite{display:block;margin-top:22px;font-style:normal}
+@media (max-width:900px){.quote .lbl,.quote blockquote{grid-column:1/-1}}
+.lbl{display:flex;flex-direction:column;gap:8px}
+.lbl .mono:first-child{color:var(--c)}
+.comp{margin-top:clamp(56px,7vw,112px);align-items:start}
+.cap{margin-top:12px;display:flex;justify-content:space-between;gap:16px}
+.tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);border:1px solid var(--line-2);border-radius:999px;padding:3px 9px;white-space:nowrap;align-self:flex-start}
+.tag.real{color:var(--fg);border-color:var(--c)}
+.pic{overflow:hidden;background:var(--bg-2);position:relative}
+.pic img{width:100%}
+[data-cur]{cursor:pointer}
+@media (max-width:900px){.comp>*{grid-column:1/-1!important;margin-top:0!important}.comp{row-gap:36px}}
+
+/* System band in the case's own color */
+.band-c{background:var(--cb);margin-top:clamp(72px,9vw,140px);padding-block:clamp(64px,8vw,120px)}
+.band-c .head{margin-bottom:clamp(28px,4vw,52px)}
+.band-c .head h2{font-size:clamp(34px,4.4vw,66px)}
+.sys{align-items:start}
+.sys .pal{grid-column:1/span 5}
+.sys .rules{grid-column:7/span 6}
+@media (max-width:900px){.sys .pal,.sys .rules{grid-column:1/-1}}
+.chips{display:grid;grid-template-columns:repeat(var(--n,4),minmax(0,1fr));gap:0}
+.chip{aspect-ratio:3/4;position:relative;display:flex;align-items:flex-end;padding:10px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.14)}
+.chip span{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;mix-blend-mode:difference;color:#fff}
+.rules dl{margin:0;border-top:1px solid color-mix(in srgb,var(--fg) 22%,transparent)}
+.rules div{display:grid;grid-template-columns:130px 1fr;gap:16px;padding-block:16px;border-bottom:1px solid color-mix(in srgb,var(--fg) 14%,transparent)}
+.rules dt{color:color-mix(in srgb,var(--fg) 62%,transparent)}
+.rules dd{margin:0;font-size:16px;line-height:1.45}
+@media (max-width:560px){.rules div{grid-template-columns:1fr;gap:4px}}
+
+/* Filmstrip */
+.strip{margin-top:clamp(48px,6vw,88px)}
+.strip-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:18px}
+.strip-head h3{font-size:clamp(24px,2.4vw,34px);letter-spacing:-.025em;line-height:1.05;max-width:22ch}
+.strip-ctl{display:flex;gap:8px}
+.icon{width:42px;height:42px;border-radius:50%;border:1px solid var(--line-2);background:none;cursor:pointer;display:grid;place-items:center;font-size:16px;transition:border-color .2s,background .2s}
+.icon:hover{border-color:var(--fg)}
+.track{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:4px;cursor:grab;overscroll-behavior-x:contain}
+.track::-webkit-scrollbar{display:none}
+.track.drag{cursor:grabbing;scroll-snap-type:none}
+.track.drag *{pointer-events:none}
+.track figure{flex:0 0 auto;scroll-snap-align:start}
+.track img{height:clamp(300px,36vw,520px);width:auto;max-width:none;user-select:none;-webkit-user-drag:none}
+.track.wide img{height:clamp(220px,30vw,440px)}
+.track figcaption{margin-top:10px}
+.bleed-r{padding-left:max(16px,env(safe-area-inset-left,0px))}
+@media (min-width:800px){.bleed-r{padding-left:max(48px,env(safe-area-inset-left,0px),calc((100vw - var(--wrap))/2 + 48px))}}
+
+/* Before / after */
+.ba{position:relative;overflow:hidden;background:var(--bg-2);--x:50%;aspect-ratio:876/1073;max-width:100%;touch-action:pan-y}
+.ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ba .after{position:absolute;inset:0;clip-path:inset(0 0 0 var(--x))}
+.ba .handle{position:absolute;top:0;bottom:0;left:var(--x);width:0;border-left:1.5px solid var(--fg);pointer-events:none}
+.ba .handle i{position:absolute;top:50%;left:0;width:54px;height:54px;transform:translate(-50%,-50%);border-radius:50%;background:var(--fg);color:var(--bg);display:grid;place-items:center;font-size:15px;font-style:normal;letter-spacing:-2px}
+.ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
+.ba:focus-within{outline:1.5px solid var(--fg);outline-offset:4px}
+.ba .lb{position:absolute;top:14px;padding:5px 10px;background:rgba(0,0,0,.6);color:#fff;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;pointer-events:none}
+.ba .lb.l{left:14px}.ba .lb.r{right:14px}
+
+/* Annotated page */
+.anno{position:relative}
+.anno .pin-n{position:absolute;width:30px;height:30px;margin:-15px 0 0 -15px;border-radius:50%;background:var(--c);color:var(--bg);display:grid;place-items:center;font-family:var(--mono);font-size:12px;font-weight:500;box-shadow:0 0 0 6px color-mix(in srgb,var(--c) 30%,transparent)}
+.legend{margin:0;padding:0;list-style:none;counter-reset:l;border-top:1px solid var(--line)}
+.legend li{display:grid;grid-template-columns:40px 1fr;gap:12px;padding-block:14px;border-bottom:1px solid var(--line);font-size:15.5px}
+.legend li b{display:block;font-weight:600}
+.legend li span.m{font-family:var(--mono);font-size:12px;color:var(--c);padding-top:2px}
+.legend li p{color:var(--mute);font-size:14.5px;margin-top:2px}
+
+/* Who-did-what */
+.who{display:grid;grid-template-columns:110px 1fr;gap:18px;padding-block:20px;border-bottom:1px solid var(--line)}
+.who h4{font-size:19px;letter-spacing:-.01em;line-height:1.2;margin-bottom:6px}
+.who p{color:var(--mute);font-size:15px}
+.who .mono{color:var(--c)}
+.who.ai .mono{color:var(--mute)}
+@media (max-width:560px){.who{grid-template-columns:1fr;gap:4px}}
+.tools{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.tools span{font-family:var(--mono);font-size:11px;letter-spacing:.04em;padding:4px 9px;border:1px solid var(--line-2);border-radius:999px}
+
+/* Deliverables */
+.deliv{margin-top:clamp(56px,7vw,104px);padding-top:22px;border-top:1px solid var(--line);align-items:start}
+.deliv .lbl{grid-column:1/span 3}
+.deliv ul{grid-column:4/span 9;margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px 8px}
+.deliv li{font-size:15px;padding:7px 14px;border:1px solid var(--line-2);border-radius:999px}
+@media (max-width:900px){.deliv .lbl,.deliv ul{grid-column:1/-1}}
+
+/* Pitalito interlude */
+.anat{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--g);counter-reset:a}
+.anat figure{display:flex;flex-direction:column;gap:12px}
+.anat .pic{aspect-ratio:16/11}
+.anat .pic img{width:100%;height:100%;object-fit:cover}
+.anat .pic.fit img{object-fit:contain}
+.anat figcaption{display:flex;gap:12px;align-items:baseline;border-top:1px solid var(--line);padding-top:12px}
+.anat figcaption b{font-weight:600;font-size:16px;display:block}
+.anat figcaption span.p{color:var(--mute);font-size:14px}
+@media (max-width:900px){.anat{grid-template-columns:1fr 1fr}}
+
+@media (max-width:900px){.g12>[style*="grid-column"]{grid-column:1/-1!important;margin-top:0!important}.legend{margin-top:24px}}
+/* Light band: Para Alegra */
+.light{background:var(--paper);color:var(--ink);margin-top:clamp(120px,14vw,220px)}
+.light .sec{padding-block:clamp(80px,10vw,150px)}
+.light .mute,.light .head p{color:var(--ink-mute)}
+.light ::selection{background:var(--ink);color:var(--paper)}
+.light :focus-visible{outline-color:var(--ink)}
+.light .rn{color:var(--ink)}.light .rn b{color:var(--ink)}
+.rows{border-top:1.5px solid var(--ink)}
+.row{padding-block:28px;border-bottom:1px solid var(--ink-line);align-items:start}
+.row .n{grid-column:span 1;padding-top:6px}
+.row h3{grid-column:span 4;font-size:clamp(24px,2.3vw,34px);line-height:1.05;letter-spacing:-.022em}
+.row p{grid-column:span 4;color:var(--ink-mute);font-size:16px}
+.proof{grid-column:span 3;display:grid;grid-template-columns:76px 1fr;gap:14px;align-items:center;text-decoration:none;color:inherit;background:none;border:0;padding:0;cursor:pointer;text-align:left}
+.proof img{width:76px;height:56px;object-fit:cover}
+.proof span{font-size:14px;line-height:1.35}
+.proof em{display:block;font-style:normal;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-mute);margin-bottom:3px}
+.proof:hover b{text-decoration:underline;text-underline-offset:3px}
+@media (max-width:900px){.row .n{grid-column:span 2}.row h3{grid-column:span 10}.row p,.proof{grid-column:1/-1}}
+
+/* Archive */
+.arch-ctl{display:flex;gap:6px;justify-content:flex-end}
+.arch-ctl button{padding:8px 14px;border-radius:999px;border:1px solid var(--line-2);background:none;cursor:pointer;font-size:13.5px}
+.arch-ctl button[aria-pressed="true"]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.index{border-top:1.5px solid var(--fg)}
+.ix{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--g);align-items:baseline;padding-block:22px;border-bottom:1px solid var(--line);text-decoration:none;width:100%;background:none;border-left:0;border-right:0;border-top:0;cursor:pointer;text-align:left;transition:padding .4s var(--ease),color .25s}
+.ix .y{grid-column:span 1}
+.ix .t{grid-column:span 6;font-size:clamp(22px,2.6vw,40px);line-height:1.05;letter-spacing:-.028em;font-weight:500}
+.ix .d{grid-column:span 4}
+.ix .ar{grid-column:span 1;text-align:right;font-size:20px;transition:transform .35s var(--ease)}
+.ix .th{display:none}
+.ix .star{color:var(--fg);margin-left:8px;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;vertical-align:middle;border:1px solid var(--line-2);border-radius:999px;padding:2px 8px;position:relative;top:-.4em}
+.index:hover .ix{color:var(--mute)}
+.index .ix:hover,.index .ix:focus-visible{color:var(--fg);padding-left:16px}
+.ix:hover .ar{transform:translateX(-6px)}
+@media (max-width:900px){
+  .ix{grid-template-columns:64px 1fr auto;gap:14px;align-items:center}
+  .ix .th{display:block;width:64px;height:48px;object-fit:cover;grid-row:span 2}
+  .ix .y{grid-column:3;grid-row:1}.ix .t{grid-column:2;grid-row:1}.ix .d{grid-column:2;grid-row:2}.ix .ar{display:none}.ix .star{display:none}
+  .index:hover .ix{color:var(--fg)}.index .ix:hover{padding-left:0}
+}
+.mosaic{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:36px var(--g)}
+.mo{grid-column:span 4;display:flex;flex-direction:column;gap:12px;background:none;border:0;padding:0;text-align:left;cursor:pointer;text-decoration:none;color:inherit}
+.mo:nth-child(6n+1),.mo:nth-child(6n+5){grid-column:span 6}
+.mo .pic{aspect-ratio:4/3}
+.mo .pic img{height:100%;object-fit:cover;transition:transform .9s var(--ease)}
+.mo:hover .pic img{transform:scale(1.03)}
+.mo .r{display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+.mo b{font-size:20px;font-weight:600;letter-spacing:-.015em;line-height:1.15}
+@media (max-width:900px){.mo,.mo:nth-child(6n+1),.mo:nth-child(6n+5){grid-column:span 6}}
+@media (max-width:560px){.mo,.mo:nth-child(6n+1),.mo:nth-child(6n+5){grid-column:1/-1}}
+.peek{position:fixed;left:0;top:0;width:360px;pointer-events:none;z-index:15;opacity:0;transform:translate3d(-999px,0,0);transition:opacity .25s ease}
+.peek img{width:100%;aspect-ratio:4/3;object-fit:cover;box-shadow:0 30px 70px rgba(0,0,0,.5)}
+.peek.on{opacity:1}
+@media (hover:none),(max-width:900px){.peek{display:none}}
+
+/* Oficio */
+.flow{border-top:1.5px solid var(--fg)}
+.flow>div{grid-column:span 4;padding-top:20px;display:flex;flex-direction:column;gap:10px}
+.flow h3{font-size:clamp(22px,2vw,28px);letter-spacing:-.02em;line-height:1.1}
+.flow p{color:var(--mute);font-size:15.5px;max-width:36ch}
+.flow .me h3{color:var(--fg)}
+@media (max-width:900px){.flow>div{grid-column:1/-1;border-bottom:1px solid var(--line);padding-bottom:22px}}
+.steps{margin-top:clamp(64px,8vw,112px)}
+.step{grid-column:span 3;display:flex;flex-direction:column;gap:12px}
+.step h4{font-size:21px;letter-spacing:-.015em;line-height:1.15}
+.step p{color:var(--mute);font-size:15px}
+@media (max-width:900px){.step{grid-column:span 6}}
+@media (max-width:520px){.step{grid-column:1/-1}}
+
+/* Profile */
+.prof .txt{grid-column:span 7}
+.prof .big{font-size:clamp(24px,2.7vw,40px);line-height:1.2;letter-spacing:-.022em;font-weight:500}
+.prof .sm{margin-top:24px;color:var(--mute);max-width:58ch}
+.prof dl{grid-column:9/span 4;margin:0;border-top:1.5px solid var(--fg)}
+.prof dl div{display:grid;grid-template-columns:110px 1fr;gap:12px;padding-block:14px;border-bottom:1px solid var(--line)}
+.prof dt{color:var(--mute)}
+.prof dd{margin:0;font-size:15px}
+.figs{margin-top:clamp(56px,7vw,96px)}
+.figs div{grid-column:span 3;border-top:1px solid var(--line-2);padding-top:14px}
+.figs b{display:block;font-size:clamp(48px,5.6vw,88px);font-weight:500;letter-spacing:-.045em;line-height:1;font-variant-numeric:tabular-nums;margin-bottom:10px}
+@media (max-width:900px){.prof .txt,.prof dl{grid-column:1/-1}.figs div{grid-column:span 6}}
+
+/* Contact */
+.contact{padding-block:clamp(110px,14vw,200px) clamp(36px,5vw,60px);position:relative;overflow:hidden}
+.contact h2{font-size:clamp(68px,14vw,220px);line-height:.84;letter-spacing:-.055em;font-stretch:94%;display:flex;align-items:center;gap:.12em}
+.contact h2 svg{width:.72em;height:.72em;flex:0 0 auto}
+.mail{display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px;margin-top:clamp(36px,4vw,60px);padding-block:24px;border-block:1px solid var(--line)}
+.addr{font-size:clamp(24px,3.4vw,54px);letter-spacing:-.028em;font-weight:500;user-select:all;overflow-wrap:anywhere;min-width:0;flex:1 1 auto}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 32px;padding-top:22px}
+
+/* Custom cursor: the logo ring */
+.cur{position:fixed;left:0;top:0;z-index:40;pointer-events:none;width:14px;height:14px;margin:-7px 0 0 -7px;border:1.5px solid var(--fg);border-radius:50%;display:grid;place-items:center;transition:width .35s var(--ease),height .35s var(--ease),margin .35s var(--ease),background .35s,border-color .35s,opacity .3s;opacity:0;mix-blend-mode:normal}
+.cur span{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--bg);opacity:0;transition:opacity .2s}
+.cur.on{opacity:1}
+.cur.big{width:84px;height:84px;margin:-42px 0 0 -42px;background:var(--fg)}
+.cur.big span{opacity:1}
+@media (hover:none),(pointer:coarse){.cur{display:none}}
+@media (prefers-reduced-motion:reduce){.cur{display:none}}
+
+/* Dialog: opens as an expanding monogram circle from the click point */
+dialog{border:0;padding:0;margin:0;width:100%;height:100%;max-width:none;max-height:none;background:var(--bg);color:var(--fg)}
+dialog::backdrop{background:rgba(0,0,0,.6)}
+dialog[open]{animation:open .8s var(--ease-io) both}
+@keyframes open{from{clip-path:circle(0 at var(--ox,50%) var(--oy,50%))}to{clip-path:circle(150% at var(--ox,50%) var(--oy,50%))}}
+@media (prefers-reduced-motion:reduce){dialog[open]{animation:none}}
+.dlg{height:100%;overflow-y:auto;overscroll-behavior:contain}
+.dlg-bar{position:sticky;top:0;z-index:2;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+.dlg-bar .wrap{display:flex;gap:10px;align-items:center;padding-block:12px}
+.dlg-bar .t{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dlg-head{padding-block:clamp(40px,6vw,88px) clamp(28px,4vw,48px);align-items:end}
+.dlg-head .l{grid-column:span 7}
+.dlg-head h2{font-size:clamp(42px,6.4vw,104px);line-height:.9;letter-spacing:-.045em;font-stretch:95%;margin-top:16px}
+.dlg-head .concept{font-size:22px;line-height:1.25;margin-top:22px;font-weight:500}
+.dlg-head .txt{margin-top:14px;color:var(--mute);max-width:62ch}
+.dlg-head .r{grid-column:9/span 4;display:flex;flex-direction:column;gap:22px}
+@media (max-width:900px){.dlg-head .l,.dlg-head .r{grid-column:1/-1}}
+.kv{margin:0;display:grid;gap:12px;padding-top:18px;border-top:1px solid var(--line)}
+.kv div{display:grid;grid-template-columns:100px 1fr;gap:12px}
+.kv dt{color:var(--mute)}
+.kv dd{margin:0;font-size:14.5px;line-height:1.45}
+.gal{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding-bottom:40px}
+.gal img{width:100%;background:var(--bg-2)}
+.gal .w{grid-column:1/-1}
+@media (max-width:640px){.gal{grid-template-columns:1fr}}
+.dlg-next{display:block;width:100%;border:0;border-top:1px solid var(--line);background:none;text-align:left;cursor:pointer;padding-block:40px 64px}
+.dlg-next b{display:block;font-size:clamp(32px,5vw,72px);line-height:1;letter-spacing:-.04em;font-weight:600;margin-top:10px}
+.dlg-next:hover b{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:8px}
+</style>
+</head>
+<body>
+<a class="skip" href="#casos">Saltar al trabajo</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="mk" viewBox="0 0 104 104">
+    <path d="M61.99 10.69A42.5 42.5 0 0 1 54 94.45M50 94.45A42.5 42.5 0 0 1 43.02 10.46" fill="none" stroke="currentColor" stroke-width="13"/>
+    <rect x="46" y="3" width="13" height="83" fill="currentColor"/>
+    <rect x="46" y="44" width="40" height="11" fill="currentColor"/>
+  </symbol>
+</svg>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="id" href="#inicio" aria-label="Leyder Hernández, inicio"><svg aria-hidden="true"><use href="#mk"/></svg><b>Leyder Hernández</b><span class="now" id="now" aria-live="polite"></span></a>
+    <nav class="nav" aria-label="Principal">
+      <a href="#casos">Casos</a>
+      <a href="#archivo">Archivo</a>
+      <a href="#alegra">Para Alegra</a>
+      <a href="#oficio">Oficio</a>
+      <a href="#perfil">Perfil</a>
+    </nav>
+    <div class="top-r"><span class="mono mute clock" id="clock">Barranquilla, CO</span><a class="btn" href="#contacto">Contacto</a></div>
+  </div>
+  <span class="prog" id="prog" aria-hidden="true"></span>
+</header>
+
+<main id="inicio">
+  <!-- HERO -->
+  <section class="scene" id="scene" aria-label="Presentación">
+    <div class="pin">
+      <div class="win" id="win" data-cur="Ver caso">
+        <picture>
+          <source media="(max-width:700px)" srcset="assets/img/carnaval-2026-04-1200.jpg">
+          <img src="assets/img/carnaval-2026-00-2000.jpg" srcset="assets/img/carnaval-2026-00-1200.jpg 1200w, assets/img/carnaval-2026-00-2000.jpg 2000w" sizes="100vw" width="2000" height="878" alt="Carnaval de Polonuevo 2026: un artista escupe fuego junto al logotipo y el lema #PonteBacano" fetchpriority="high">
+        </picture>
+      </div>
+      <div class="hero-ui" id="hero-ui">
+        <div class="wrap">
+          <div class="hmeta mono mute"><span>Diseñador gráfico · IA aplicada</span><span class="hide-s">Identidad · Campañas · Editorial</span><span>Barranquilla, Colombia</span><span class="hide-s">Portafolio 2022–2026</span></div>
+          <h1 class="lock" aria-label="Leyder Hernández">
+            <span class="l1" aria-hidden="true"><span class="ln"><span>Leyder</span></span></span>
+            <span class="l2" aria-hidden="true">
+              <svg class="mk" id="mk-win" viewBox="0 0 104 104">
+                <path class="ring" d="M61.99 10.69A42.5 42.5 0 0 1 54 94.45" pathLength="140"/>
+                <path class="ring" d="M50 94.45A42.5 42.5 0 0 1 43.02 10.46" pathLength="140"/>
+                <rect class="bar" x="46" y="3" width="13" height="83"/>
+                <rect class="cross" x="46" y="44" width="40" height="11"/>
+              </svg>
+              <span class="ln"><span>Hernández</span></span>
+            </span>
+          </h1>
+          <div class="hfoot">
+            <p class="pos">De la idea a cada formato.</p>
+            <p class="sub">Diseño identidades, campañas y piezas editoriales con un mismo criterio, del afiche a la credencial y del post al informe.</p>
+            <span class="scroll mono mute"><i></i>Desliza</span>
+          </div>
+        </div>
+      </div>
+      <div class="wcap" aria-hidden="true"><div class="wrap"><span class="mono">Caso 01 / 04</span><b>Carnaval de Polonuevo 2026</b></div></div>
+    </div>
+  </section>
+
+  <div id="casos">
+  <!-- CASE 01 · CARNAVAL -->
+  <article class="case" id="caso-carnaval" data-case="01" data-title="Carnaval de Polonuevo 2026" style="--c:#F2913A;--cb:#1E1310">
+    <div class="wrap">
+      <div class="g12 c-title">
+        <div class="k"><span class="rn" aria-hidden="true"><svg viewBox="0 0 104 104"><path d="M61.99 10.69A42.5 42.5 0 0 1 54 94.45M50 94.45A42.5 42.5 0 0 1 43.02 10.46" fill="none" stroke="currentColor" stroke-width="5"/></svg><b>01</b></span><span class="mono mute">Caso 01 / 04</span></div>
+        <h2 class="rv">Carnaval de Polonuevo 2026</h2>
+      </div>
+      <dl class="g12 c-meta">
+        <div><dt class="mono">Cliente</dt><dd>Alcaldía de Polonuevo, Atlántico</dd></div>
+        <div><dt class="mono">Año</dt><dd>2026</dd></div>
+        <div><dt class="mono">Disciplinas</dt><dd>Identidad visual · Dirección de arte · Campaña</dd></div>
+        <div><dt class="mono">Formatos</dt><dd>Redes · Afiches · Mapa · Credenciales · Merch</dd></div>
+      </dl>
+      <div class="g12 c-txt">
+        <div class="lbl"><span class="mono">Contexto</span></div>
+        <p class="body rv">La edición 2026 del carnaval tenía una programación amplia: lectura de bando y coronación, reyes infantiles, carnaval de los niños, guacherna, carnavalito y gran toma municipal. Cada evento tiene su pieza, y todas se leen como una sola fiesta.</p>
+      </div>
+      <div class="g12 quote">
+        <div class="lbl"><span class="mono">Concepto</span></div>
+        <blockquote class="rv"><em>#PonteBacano</em>, con el diablo arlequín como figura central.<cite class="mono mute">El lema firma cada pieza, siempre con su asterisco</cite></blockquote>
+      </div>
+      <div class="g12 comp">
+        <figure class="ri" style="grid-column:1/span 5" data-cur="Ampliar"><img src="assets/img/carnaval-2026-04-1200.jpg" width="1200" height="1500" alt="Afiche Gran Toma Municipal, Carnaval de Polonuevo 2026" loading="lazy" decoding="async"><figcaption class="cap"><span class="mono mute">Gran Toma Municipal · afiche</span></figcaption></figure>
+        <figure class="ri" style="grid-column:7/span 5;margin-top:22%" data-cur="Ampliar"><img src="assets/img/carnaval-2026-05-1200.jpg" width="1200" height="1500" alt="Afiche con el mapa del recorrido del carnaval" loading="lazy" decoding="async"><figcaption class="cap"><span class="mono mute">Recorrido · mapa y afiche</span></figcaption></figure>
+      </div>
+    </div>
+    <div class="band-c">
+      <div class="wrap">
+        <div class="g12 head"><div class="k"><span class="rn" aria-hidden="true"><svg viewBox="0 0 104 104"><path d="M61.99 10.69A42.5 42.5 0 0 1 54 94.45M50 94.45A42.5 42.5 0 0 1 43.02 10.46" fill="none" stroke="currentColor" stroke-width="5"/></svg><b>S</b></span><span class="mono" style="color:var(--c)">Sistema</span></div><h2>Negro, fuego y oro.</h2><p class="mute">Lo que se repite en todas las piezas y las vuelve una sola campaña.</p></div>
+        <div class="g12 sys">
+          <div class="pal"><div class="chips" style="--n:5"><div class="chip" style="background:#1A1414"><span>#1A1414</span></div><div class="chip" style="background:#7A1F1A"><span>#7A1F1A</span></div><div class="chip" style="background:#E8562A"><span>#E8562A</span></div><div class="chip" style="background:#F2B33D"><span>#F2B33D</span></div><div class="chip" style="background:#F4E3C1"><span>#F4E3C1</span></div></div><p class="mono mute" style="margin-top:12px">Paleta tomada de las piezas</p></div>
+          <div class="rules"><dl>
+            <div><dt class="mono">Logotipo</dt><dd>Lettering caligráfico con ornamentos y el año en grande.</dd></div>
+            <div><dt class="mono">Imagen</dt><dd>Fotografía de personajes del carnaval sobre fondos de fuego y humo.</dd></div>
+            <div><dt class="mono">Firma</dt><dd>#PonteBacano con asterisco, al pie de cada pieza.</dd></div>
+            <div><dt class="mono">Estructura</dt><dd>Logotipo arriba, evento y datos al centro, franja institucional abajo.</dd></div>
+          </dl></div>
+        </div>
+      </div>
+      <div class="strip">
+        <div class="wrap strip-head"><h3>Seis eventos, una misma estructura.</h3><div class="strip-ctl"><button class="icon" type="button" data-strip="-1" aria-label="Anterior">←</button><button class="icon" type="button" data-strip="1" aria-label="Siguiente">→</button></div></div>
+        <div class="track bleed-r" data-cur="Arrastrar" tabindex="0" aria-label="Piezas de programación del carnaval">
+          <figure><img src="assets/img/carnaval-2026-06-1200.jpg" width="1080" height="1350" alt="Post Lectura de Bando y Coronación" loading="lazy" decoding="async"><figcaption class="mono mute">Lectura de bando y coronación</figcaption></figure>
+          <figure><img src="assets/img/carnaval-2026-07-1200.jpg" width="1080" height="1350" alt="Post Reyes Infantiles" loading="lazy" decoding="async"><figcaption class="mono mute">Reyes infantiles</figcaption></figure>
+          <figure><img src="assets/img/carnaval-2026-08-1200.jpg" width="1080" height="1350" alt="Post Carnaval de los niños" loading="lazy" decoding="async"><figcaption class="mono mute">Carnaval de los niños</figcaption></figure>
+          <figure><img src="assets/img/carnaval-2026-09-1200.jpg" width="1080" height="1350" alt="Post X Guacherna Departamental con código QR de inscripción" loading="lazy" decoding="async"><figcaption class="mono mute">Guacherna departamental</figcaption></figure>
+          <figure><img src="assets/img/carnaval-2026-10-1200.jpg" width="1080" height="1350" alt="Post Tradicional Carnavalito" loading="lazy" decoding="async"><figcaption class="mono mute">Carnavalito</figcaption></figure>
+          <figure><img src="assets/img/carnaval-2026-11-1200.jpg" width="1080" height="1350" alt="Post del recorrido con mapa" loading="lazy" decoding="async"><figcaption class="mono mute">Recorrido</figcaption></figure>
+          <span style="flex:0 0 32px" aria-hidden="true"></span>
+        </div>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="g12 comp">
+        <figure class="ri" style="grid-column:1/span 7" data-cur="Ampliar"><img src="assets/img/carnaval-2026-03-1200.jpg" width="1199" height="1312" alt="Credenciales del carnaval para Junta del Carnaval, Prensa y Comunicaciones" loading="lazy" decoding="async"><figcaption class="cap"><span class="mono mute">Credenciales · Junta, Prensa, Comunicaciones</span><span class="tag">Mockup</span></figcaption></figure>
+        <div style="grid-column:9/span 4;display:grid;gap:36px">
+          <figure class="ri" data-cur="Ampliar"><img src="assets/img/carnaval-2026-02-1200.jpg" width="1200" height="800" alt="Programación del carnaval en Instagram" loading="lazy" decoding="async"><figcaption class="cap"><span class="mono mute">Programación en redes</span><span class="tag">Mockup</span></figcaption></figure>
+          <figure class="ri" data-cur="Ampliar"><img src="assets/img/carnaval-2026-01-1200.jpg" srcset="assets/img/carnaval-2026-01-1200.jpg 1200w, assets/img/carnaval-2026-01-2000.jpg 2000w" sizes="(min-width:900px) 30vw, 100vw" width="1200" height="600" alt="Camiseta, bandera, tula y gorra del carnaval" loading="lazy" decoding="async"><figcaption class="cap"><span class="mono mute">Merch · camiseta, bandera, tula, gorra</span><span class="tag">Mockup</span></figcaption></figure>
+        </div>
+      </div>
+      <div class="g12 deliv"><div class="lbl"><span class="mono" style="color:var(--c)">Entregables</span></div><ul><li>Identidad visual</li><li>Programación en redes</li><li>Afiches</li><li>Mapa del recorrido</li><li>Credenciales</li><li>Camisetas, banderas, tulas y gorras</li></ul></div>
+    </div>
+  </article>
+
+  <!-- CASE 02 · BARCA -->
+  <article class="case" id="caso-barca" data-case="02" data-title="La Barca del Arte" style="--c:#F07B5C;--cb:#2B2A4C">
+    <figure class="c-cover ri" data-cur="Ampliar"><img src="assets/img/barca-del-arte-00-1200.jpg" srcset="assets/img/barca-del-arte-00-1200.jpg 1200w, assets/img/barca-del-arte-00-2000.jpg 2000w" sizes="100vw" width="1200" height="674" alt="Nueva identidad de La Barca del Arte sobre fondo índigo" loading="lazy" decoding="async"></figure>
+    <div class="wrap">
+      <div class="g12 c-title">
+        <div class="k"><span class="rn" aria-hidden="true"><svg viewBox="0 0 104 104"><path d="M61.99 10.69A42.5 42.5 0 0 1 54 94.45M50 94.45A42.5 42.5 0 0 1 43.02 10.46" fill="none" stroke="currentColor" stroke-width="5"/></svg><b>02</b></span><span class="mono mute">Caso 02 / 04</span></div>
+        <h2 class="rv">La Barca del Arte</h2>
+      </div>
+      <dl class="g12 c-meta">
+        <div><dt class="mono">Cliente</dt><dd>Casa de Teatro Ay Macondo</dd></div>
+        <div><dt class="mono">Año</dt><dd>2022</dd></div>
+        <div><dt class="mono">Disciplinas</dt><dd>Rediseño de identidad · Ilustración · Campaña</dd></div>
+        <div><dt class="mono">Formatos</dt><dd>Afiche · Redes · Boletería · Programación</dd></div>
+      </dl>
+      <div class="g12 c-txt">
+        <div class="lbl"><span class="mono">Contexto</span></div>
+        <p class="body rv">La Barca del Arte es un evento de la Temporada de Artes Escénicas de la Casa de Teatro Ay Macondo, con funciones de teatro, circo y narración escénica. El encargo fue rediseñar su imagen.</p>
+      </div>
+      <div class="g12 quote">
+        <div class="lbl"><span class="mono">Reto</span></div>
+        <blockquote class="rv">Un aspecto más actual, <em>sin perder lo que la hacía reconocible.</em></blockquote>
+      </div>
+      <div class="g12 comp" style="align-items:center">
+        <div style="grid-column:1/span 6">
+          <div class="ba ri" id="ba">
+            <img src="assets/img/barca-del-arte-02-1200.jpg" width="1170" height="1431" alt="Identidad anterior: afiche ilustrado de La Barca del Arte" loading="lazy" decoding="async">
+            <div class="after"><img src="assets/img/barca-del-arte-03-1200.jpg" width="876" height="1073" alt="Nueva identidad: afiche de La Barca del Arte" loading="lazy" decoding="async"></div>
+            <span class="lb l">Anterior</span><span class="lb r">Nueva</span>
+            <span class="handle"><i aria-hidden="true">‹ ›</i></span>
+            <input type="range" min="0" max="100" value="50" id="ba-r" aria-label="Comparar identidad anterior y nueva">
+          </div>
+          <p class="mono mute" style="margin-top:12px">Arrastra para comparar</p>
+        </div>
+        <div style="grid-column:8/span 5" class="lbl">
+          <span class="mono">Decisiones</span>
+          <p style="font-size:clamp(18px,1.5vw,21px);line-height:1.5;margin-top:6px">La barca se mantiene como el centro de la imagen. Cambian el trazo, la paleta y el lettering, que pasa de mayúsculas ornamentales a una escritura manual más ligera.</p>
+        </div>
+      </div>
+    </div>
+    <div class="band-c">
+      <div class="wrap">
+        <div class="g12 head"><div class="k"><span class="rn" aria-hidden="true"><svg viewBox="0 0 104 104"><path d="M61.99 10.69A42.5 42.5 0 0 1 54 94.45M50 94.45A42.5 42.5 0 0 1 43.02 10.46" fill="none" stroke="currentColor" stroke-width="5"/></svg><b>S</b></span><span class="mono" style="color:var(--c)">Sistema</span></div><h2>Índigo, coral y papel rasgado.</h2><p class="mute">Un patrón, una forma de tratar la foto y una etiqueta por disciplina.</p></div>
+        <div class="g12 sys">
+          <div class="pal"><div class="chips" style="--n:4"><div class="chip" style="background:#34335A"><span>#34335A</span></div><div class="chip" style="background:#E0563A"><span>#E0563A</span></div><div class="chip" style="background:#D99B45"><span>#D99B45</span></div><div class="chip" style="background:#F5E8D1"><span>#F5E8D1</span></div></div><p class="mono mute" style="margin-top:12px">Paleta tomada de las piezas</p></div>
+          <div class="rules"><dl>
+            <div><dt class="mono">Lettering</dt><dd>Escritura manual en minúsculas, con “ARTE” en mayúsculas.</dd></div>
+            <div><dt class="mono">Patrón</dt><dd>El personaje y el lettering repetidos sobre índigo.</dd></div>
+            <div><dt class="mono">Fotografía</dt><dd>Duotono en la paleta del evento, con borde de papel rasgado.</dd></div>
+            <div><dt class="mono">Etiquetas</dt><dd>Teatro, circo y narración escénica, cada una con su ícono.</dd></div>
+          </dl></div>
+        </div>
+        <figure class="ri" style="margin-top:clamp(40px,5vw,72px)" data-cur="Ampliar"><img src="assets/img/barca-del-arte-01-1200.jpg" srcset="assets/img/barca-del-arte-01-1200.jpg 1200w, assets/img/barca-del-arte-01-2000.jpg 2000w" sizes="(min-width:1400px) 1300px, 100vw" width="1200" height="674" alt="Patrón gráfico de La Barca del Arte" loading="lazy" decoding="async"><figcaption class="cap"><span class="mono mute">Patrón gráfico</span></figcaption></figure>
+      </div>
+      <div class="strip">
+        <div class="wrap strip-head"><h3>La temporada, función por función.</h3><div class="strip-ctl"><button class="icon" type="button" data-strip="-1" aria-label="Anterior">←</button><button class="icon" type="button" data-strip="1" aria-label="Siguiente">→</button></div></div>
+        <div class="track bleed-r" data-cur="Arrastrar" tabindex="0" aria-label="Piezas de programación de La Barca del Arte">
+          <figure><img src="assets/img/barca-del-arte-06-1200.jpg" width="1200" height="1200" alt="Pieza ¡Victoria no se lo digas a nadie!, teatro" loading="lazy" decoding="async"><figcaption class="mono mute">Teatro</figcaption></figure>
+          <figure><img src="assets/img/barca-del-arte-07-1200.jpg" width="1200" height="1200" alt="Pieza La Conquista, circo" loading="lazy" decoding="async"><figcaption class="mono mute">Circo</figcaption></figure>
+          <figure><img src="assets/img/barca-del-arte-08-1200.jpg" width="1200" height="1200" alt="Pieza La Liga Impro, teatro" loading="lazy" decoding="async"><figcaption class="mono mute">Teatro</figcaption></figure>
+          <figure><img src="assets/img/barca-del-arte-09-1200.jpg" width="1200" height="1200" alt="Pieza Diana canta y encanta, narración escénica" loading="lazy" decoding="async"><figcaption class="mono mute">Narración escénica</figcaption></figure>
+          <figure><img src="assets/img/barca-del-arte-10-1200.jpg" width="1200" height="1200" alt="Pieza Monedita, circo" loading="lazy" decoding="async"><figcaption class="mono mute">Circo</figcaption></figure>
+          <figure><img src="assets/img/barca-del-arte-13-1200.jpg" width="1200" height="1200" alt="Pieza La Llorona, teatro" loading="lazy" decoding="async"><figcaption class="mono mute">Teatro</figcaption></figure>
+          <span style="flex:0 0 32px" aria-hidden="true"></span>
+        </div>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="g12 comp">
+        <figure class="ri" style="grid-column:1/span 8" data-cur="Ampliar"><img src="assets/img/barca-del-arte-04-1200.jpg" width="1200" height="867" alt="Fotografía en sitio: el afiche de la temporada en un patio durante una actividad con público" loading="lazy" decoding="async"><figcaption class="cap"><span class="mono mute">El afiche durante una actividad de la temporada</span><span class="tag real">Fotografía en sitio</span></figcaption></figure>
+        <figure class="ri" style="grid-column:10/span 3" data-cur="Ampliar"><img src="assets/img/barca-del-arte-15-1200.jpg" width="679" height="1500" alt="Programación general de la temporada" loading="lazy" decoding="async"><figcaption class="cap"><span class="mono mute">Programación general</span></figcaption></figure>
+      </div>
+      <div class="g12 comp">
+        <figure class="ri" style="grid-column:2/span 5" data-cur="Ampliar"><img src="assets/img/barca-del-arte-14-1200.jpg" width="1200" height="646" alt="Boletas de las funciones" loading="lazy" decoding="async"><figcaption class="cap"><span class="mono mute">Boletería</span><span class="tag">Mockup</span></figcaption></figure>
+        <figure class="ri" style="grid-column:8/span 5;margin-top:10%" data-cur="Ampliar"><img src="assets/img/barca-del-arte-05-1200.jpg" width="1200" height="587" alt="Programación en redes sociales" loading="lazy" decoding="async"><figcaption class="cap"><span class="mono mute">Redes sociales</span><span class="tag">Mockup</span></figcaption></figure>
+      </div>
+      <div class="g12 deliv"><div class="lbl"><span class="mono" style="color:var(--c)">Entregables</span></div><ul><li>Rediseño de identidad</li><li>Patrón gráfico</li><li>Afiche</li><li>Piezas por función</li><li>Programación general</li><li>Boletería</li><li>Redes sociales</li></ul></div>
+    </div>
+  </article>
+
+  <!-- CASE 03 · INFORME -->
+  <article class="case" id="caso-informe" data-case="03" data-title="Informe de reacreditación" style="--c:#F2914A;--cb:#14275A">
+    <figure class="c-cover ri" data-cur="Ampliar"><img src="assets/img/informe-uniatlantico-00-1200.jpg" srcset="assets/img/informe-uniatlantico-00-1200.jpg 1200w, assets/img/informe-uniatlantico-00-2000.jpg 2000w" sizes="100vw" width="1200" height="675" alt="Portada del informe de autoevaluación de la Licenciatura en Matemáticas" loading="lazy" decoding="async"></figure>
+    <div class="wrap">
+      <div class="g12 c-title">
+        <div class="k"><span class="rn" aria-hidden="true"><svg viewBox="0 0 104 104"><path d="M61.99 10.69A42.5 42.5 0 0 1 54 94.45M50 94.45A42.5 42.5 0 0 1 43.02 10.46" fill="none" stroke="currentColor" stroke-width="5"/></svg><b>03</b></span><span class="mono mute">Caso 03 / 04</span></div>
+        <h2 class="rv">Informe de reacreditación</h2>
+      </div>
+      <dl class="g12 c-meta">
+        <div><dt class="mono">Cliente</dt><dd>Universidad del Atlántico, Licenciatura en Matemáticas</dd></div>
+        <div><dt class="mono">Año</dt><dd>2026</dd></div>
+        <div><dt class="mono">Disciplinas</dt><dd>Identidad · Diseño editorial · Visualización de información</dd></div>
+        <div><dt class="mono">Destinatario</dt><dd>Consejo Nacional de Acreditación (CNA)</dd></div>
+      </dl>
+      <div class="g12 c-txt">
+        <div class="lbl"><span class="mono">Contexto</span></div>
+        <p class="body rv">La Licenciatura en Matemáticas presentó al Consejo Nacional de Acreditación su informe de autoevaluación para la reacreditación de alta calidad. El encargo fue la identidad visual y el diseño editorial del documento.</p>
+      </div>
+      <div class="g12 quote">
+        <div class="lbl"><span class="mono">Reto</span></div>
+        <blockquote class="rv">Organizar mucha información y <em>presentar los resultados con claridad.</em></blockquote>
+      </div>
+    </div>
+    <div class="band-c">
+      <div class="wrap">
+        <div class="g12 head"><div class="k"><span class="rn" aria-hidden="true"><svg viewBox="0 0 104 104"><path d="M61.99 10.69A42.5 42.5 0 0 1 54 94.45M50 94.45A42.5 42.5 0 0 1 43.02 10.46" fill="none" stroke="currentColor" stroke-width="5"/></svg><b>S</b></span><span class="mono" style="color:var(--c)">Sistema</span></div><h2>Anatomía de una página.</h2><p class="mute">Todos los capítulos comparten la misma estructura de página.</p></div>
+        <div class="g12" style="align-items:start">
+          <div class="anno ri" style="grid-column:1/span 8" data-cur="Ampliar">
+            <img src="assets/img/informe-uniatlantico-01-1200.jpg" srcset="assets/img/informe-uniatlantico-01-1200.jpg 1200w, assets/img/informe-uniatlantico-01-2000.jpg 2000w" sizes="(min-width:900px) 62vw, 100vw" width="1200" height="675" alt="Página del capítulo 18, Integralidad curricular, con sus módulos señalados" loading="lazy" decoding="async">
+            <span class="pin-n" style="left:2.6%;top:11%">1</span>
+            <span class="pin-n" style="left:61%;top:7%">2</span>
+            <span class="pin-n" style="left:38%;top:19%">3</span>
+            <span class="pin-n" style="left:3%;top:84%">4</span>
+            <span class="pin-n" style="left:47.5%;top:84%">5</span>
+          </div>
+          <ol class="legend" style="grid-column:10/span 3">
+            <li><span class="m">01</span><div><b>Código y título del capítulo</b><p>Barra de color que ubica al lector.</p></div></li>
+            <li><span class="m">02</span><div><b>Grado de cumplimiento</b><p>Dos mediciones, 2020 y 2025, lado a lado.</p></div></li>
+            <li><span class="m">03</span><div><b>Diagramas</b><p>Los procesos se explican con esquemas e íconos.</p></div></li>
+            <li><span class="m">04</span><div><b>Fortalezas</b><p>Módulo fijo al pie de cada capítulo.</p></div></li>
+            <li><span class="m">05</span><div><b>Aspectos de mejora</b><p>Siempre junto a las fortalezas, en azul.</p></div></li>
+          </ol>
+        </div>
+      </div>
+      <div class="strip">
+        <div class="wrap strip-head"><h3>Una retícula para todos los capítulos.</h3><div class="strip-ctl"><button class="icon" type="button" data-strip="-1" aria-label="Anterior">←</button><button class="icon" type="button" data-strip="1" aria-label="Siguiente">→</button></div></div>
+        <div class="track wide bleed-r" data-cur="Arrastrar" tabindex="0" aria-label="Páginas del informe">
+          <figure><img src="assets/img/informe-uniatlantico-02-1200.jpg" width="1200" height="675" alt="Página con tablas del plan de estudios" loading="lazy" decoding="async"><figcaption class="mono mute">Integralidad curricular · tablas</figcaption></figure>
+          <figure><img src="assets/img/informe-uniatlantico-04-1200.jpg" width="1200" height="675" alt="Página de flexibilidad curricular" loading="lazy" decoding="async"><figcaption class="mono mute">Flexibilidad curricular</figcaption></figure>
+          <figure><img src="assets/img/informe-uniatlantico-05-1200.jpg" width="1200" height="675" alt="Página de interdisciplinariedad" loading="lazy" decoding="async"><figcaption class="mono mute">Interdisciplinariedad</figcaption></figure>
+          <figure><img src="assets/img/informe-uniatlantico-08-1200.jpg" width="1200" height="675" alt="Página del sistema de evaluación" loading="lazy" decoding="async"><figcaption class="mono mute">Sistema de evaluación</figcaption></figure>
+          <figure><img src="assets/img/informe-uniatlantico-09-1200.jpg" width="1200" height="675" alt="Página de resultados de aprendizaje" loading="lazy" decoding="async"><figcaption class="mono mute">Resultados de aprendizaje</figcaption></figure>
+          <figure><img src="assets/img/informe-uniatlantico-10-1200.jpg" width="1200" height="675" alt="Página de competencias" loading="lazy" decoding="async"><figcaption class="mono mute">Competencias</figcaption></figure>
+          <figure><img src="assets/img/informe-uniatlantico-11-1200.jpg" width="1200" height="675" alt="Página de evaluación y autorregulación" loading="lazy" decoding="async"><figcaption class="mono mute">Autorregulación</figcaption></figure>
+          <figure><img src="assets/img/informe-uniatlantico-12-1200.jpg" width="1200" height="675" alt="Página de vinculación e interacción social" loading="lazy" decoding="async"><figcaption class="mono mute">Vinculación social</figcaption></figure>
+          <span style="flex:0 0 32px" aria-hidden="true"></span>
+        </div>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="g12 comp">
+        <div style="grid-column:1/span 5" class="lbl">
+          <span class="mono">IA en el proceso</span>
+          <h3 style="font-size:clamp(28px,3vw,44px);line-height:1.02;letter-spacing:-.03em;margin-top:8px" class="rv">Quién hizo qué.</h3>
+          <p class="mute" style="margin-top:14px;max-width:40ch">La IA agilizó la elaboración de los gráficos. La estructura y el criterio fueron del diseñador.</p>
+        </div>
+        <div style="grid-column:7/span 6;border-top:1.5px solid var(--fg)">
+          <div class="who"><span class="mono">Diseño</span><div><h4>Identidad y estructura</h4><p>Identidad visual del informe, organización de la información y retícula editorial.</p></div></div>
+          <div class="who ai"><span class="mono">IA</span><div><h4>Producción de gráficos</h4><p>Antigravity como apoyo para elaborar y optimizar los gráficos de resultados.</p><div class="tools"><span>Antigravity</span></div></div></div>
+          <div class="who"><span class="mono">Diseño</span><div><h4>Dirección y revisión final</h4><p>Cada gráfico pasó por revisión antes de entrar al documento.</p></div></div>
+        </div>
+      </div>
+      <div class="g12 comp">
+        <figure class="ri" style="grid-column:3/span 8" data-cur="Ampliar"><img src="assets/img/informe-uniatlantico-13-1200.jpg" width="1200" height="675" alt="Página de evidencias del informe" loading="lazy" decoding="async"><figcaption class="cap"><span class="mono mute">Evidencias</span></figcaption></figure>
+      </div>
+      <div class="g12 deliv"><div class="lbl"><span class="mono" style="color:var(--c)">Entregables</span></div><ul><li>Identidad del informe</li><li>Arquitectura de la información</li><li>Retícula editorial</li><li>Gráficos de resultados</li><li>Portada y capítulos</li></ul></div>
+    </div>
+  </article>
+
+  <!-- CASE 04 · FERIA -->
+  <article class="case" id="caso-feria" data-case="04" data-title="Feria Agroindustrial" style="--c:#F6B81F;--cb:#0F361B">
+    <figure class="c-cover ri" data-cur="Ampliar"><img src="assets/img/feria-agroindustrial-00-1200.jpg" srcset="assets/img/feria-agroindustrial-00-1200.jpg 1200w, assets/img/feria-agroindustrial-00-2000.jpg 2000w" sizes="100vw" width="1200" height="704" alt="Pieza principal de la Feria Agroindustrial: un campesino sonriente y el lema Sembramos futuro, movemos región" loading="lazy" decoding="async"></figure>
+    <div class="wrap">
+      <div class="g12 c-title">
+        <div class="k"><span class="rn" aria-hidden="true"><svg viewBox="0 0 104 104"><path d="M61.99 10.69A42.5 42.5 0 0 1 54 94.45M50 94.45A42.5 42.5 0 0 1 43.02 10.46" fill="none" stroke="currentColor" stroke-width="5"/></svg><b>04</b></span><span class="mono mute">Caso 04 / 04</span></div>
+        <h2 class="rv">Feria Agroindustrial</h2>
+      </div>
+      <dl class="g12 c-meta">
+        <div><dt class="mono">Cliente</dt><dd>Polonuevo, Atlántico</dd></div>
+        <div><dt class="mono">Año</dt><dd>2025</dd></div>
+        <div><dt class="mono">Disciplinas</dt><dd>Dirección visual · Sistema modular · Campaña</dd></div>
+        <div><dt class="mono">Formatos</dt><dd>Redes · Web · Impresos · Branding físico</dd></div>
+      </dl>
+      <div class="g12 c-txt">
+        <div class="lbl"><span class="mono">Contexto</span></div>
+        <p class="body rv">Era la primera Feria Agroindustrial de Polonuevo, así que la identidad se construyó desde cero. La identidad se llevó a redes y web, impresos y branding físico.</p>
+        <p class="aside rv">“Trabajé con una paleta cálida y recursos gráficos inspirados en el campo.”</p>
+      </div>
+      <div class="g12 quote">
+        <div class="lbl"><span class="mono">Concepto</span></div>
+        <blockquote class="rv">Sembramos futuro, <em>movemos región.</em></blockquote>
+      </div>
+    </div>
+    <div class="band-c">
+      <div class="wrap">
+        <div class="g12 head"><div class="k"><span class="rn" aria-hidden="true"><svg viewBox="0 0 104 104"><path d="M61.99 10.69A42.5 42.5 0 0 1 54 94.45M50 94.45A42.5 42.5 0 0 1 43.02 10.46" fill="none" stroke="currentColor" stroke-width="5"/></svg><b>S</b></span><span class="mono" style="color:var(--c)">Sistema</span></div><h2>Del símbolo al módulo.</h2><p class="mute">Un solo símbolo genera las versiones de color y el patrón que viste toda la feria.</p></div>
+        <div class="g12" style="align-items:end">
+          <figure class="ri" style="grid-column:1/span 4" data-cur="Ampliar"><img src="assets/img/feria-agroindustrial-01-1200.jpg" width="1200" height="487" alt="Símbolo y logotipo de la Feria Agroindustrial" loading="lazy" decoding="async"><figcaption class="cap"><span class="mono mute">01 · Símbolo</span></figcaption></figure>
+          <figure class="ri" style="grid-column:5/span 8" data-cur="Ampliar"><img src="assets/img/feria-agroindustrial-02-1200.jpg" width="1200" height="384" alt="Versiones del logotipo sobre verde, amarillo y naranja" loading="lazy" decoding="async"><figcaption class="cap"><span class="mono mute">02 · Versiones sobre color</span></figcaption></figure>
+        </div>
+        <figure class="ri" style="margin-top:var(--g)" data-cur="Ampliar"><img src="assets/img/feria-agroindustrial-03-1200.jpg" srcset="assets/img/feria-agroindustrial-03-1200.jpg 1200w, assets/img/feria-agroindustrial-03-2000.jpg 2000w" sizes="(min-width:1400px) 1300px, 100vw" width="1200" height="505" alt="Patrón modular de la feria" loading="lazy" decoding="async"><figcaption class="cap"><span class="mono mute">03 · Patrón modular</span></figcaption></figure>
+        <div class="g12 sys" style="margin-top:clamp(40px,5vw,72px)">
+          <div class="pal"><div class="chips" style="--n:5"><div class="chip" style="background:#0E970E"><span>#0E970E</span></div><div class="chip" style="background:#85C74B"><span>#85C74B</span></div><div class="chip" style="background:#F8C21E"><span>#F8C21E</span></div><div class="chip" style="background:#F07A12"><span>#F07A12</span></div><div class="chip" style="background:#F5F0D4"><span>#F5F0D4</span></div></div><p class="mono mute" style="margin-top:12px">Paleta tomada de las piezas</p></div>
+          <div class="rules"><dl>
+            <div><dt class="mono">Módulo</dt><dd>Formas de cuarto de círculo y hoja que se combinan en distintas composiciones.</dd></div>
+            <div><dt class="mono">Titulares</dt><dd>Serif robusta para los mensajes principales.</dd></div>
+            <div><dt class="mono">Imagen</dt><dd>Retratos de productores y producto del campo.</dd></div>
+          </dl></div>
+        </div>
+      </div>
+      <div class="strip">
+        <div class="wrap strip-head"><h3>La cuenta regresiva en redes.</h3><div class="strip-ctl"><button class="icon" type="button" data-strip="-1" aria-label="Anterior">←</button><button class="icon" type="button" data-strip="1" aria-label="Siguiente">→</button></div></div>
+        <div class="track bleed-r" data-cur="Arrastrar" tabindex="0" aria-label="Piezas para redes de la feria">
+          <figure><img src="assets/img/feria-agroindustrial-08-1200.jpg" width="1200" height="1500" alt="Post Faltan 2 días" loading="lazy" decoding="async"><figcaption class="mono mute">Faltan 2 días</figcaption></figure>
+          <figure><img src="assets/img/feria-agroindustrial-06-1200.jpg" width="1200" height="1500" alt="Post Falta 1 día" loading="lazy" decoding="async"><figcaption class="mono mute">Falta 1 día</figcaption></figure>
+          <figure><img src="assets/img/feria-agroindustrial-07-1200.jpg" width="1200" height="1500" alt="Post ¿Qué vas a encontrar?" loading="lazy" decoding="async"><figcaption class="mono mute">Qué vas a encontrar</figcaption></figure>
+          <figure><img src="assets/img/feria-agroindustrial-09-1200.jpg" width="1200" height="1500" alt="Post con el mapa de carpas de la zona gastronómica" loading="lazy" decoding="async"><figcaption class="mono mute">Carpas</figcaption></figure>
+          <span style="flex:0 0 32px" aria-hidden="true"></span>
+        </div>
+      </div>
+    </div>
+    <figure class="c-cover ri" style="margin-top:clamp(72px,9vw,140px)" data-cur="Ampliar"><img src="assets/img/feria-agroindustrial-11-1200.jpg" width="1200" height="886" alt="Fotografía en sitio: arco de entrada de la feria construido con los módulos del sistema" loading="lazy" decoding="async"></figure>
+    <div class="wrap">
+      <div class="g12" style="margin-top:16px">
+        <p class="mono mute" style="grid-column:1/span 8">El arco de entrada del evento, construido con los módulos del sistema. El patrón pasó de la pantalla al espacio.</p>
+        <span class="tag real" style="grid-column:10/span 3;justify-self:end">Fotografía en sitio</span>
+      </div>
+      <div class="g12 comp">
+        <figure class="ri" style="grid-column:1/span 6" data-cur="Ampliar"><img src="assets/img/feria-agroindustrial-05-1200.jpg" width="1200" height="640" alt="Pieza para Instagram e impreso de la feria" loading="lazy" decoding="async"><figcaption class="cap"><span class="mono mute">Redes e impreso</span><span class="tag">Mockup</span></figcaption></figure>
+        <figure class="ri" style="grid-column:8/span 5;margin-top:14%" data-cur="Ampliar"><img src="assets/img/feria-agroindustrial-10-1200.jpg" width="1200" height="694" alt="Afiche de la feria" loading="lazy" decoding="async"><figcaption class="cap"><span class="mono mute">Afiche</span><span class="tag">Mockup</span></figcaption></figure>
+      </div>
+      <figure class="ri" style="margin-top:clamp(40px,5vw,72px)" data-cur="Ampliar"><img src="assets/img/feria-agroindustrial-04-1200.jpg" srcset="assets/img/feria-agroindustrial-04-1200.jpg 1200w, assets/img/feria-agroindustrial-04-2000.jpg 2000w" sizes="(min-width:1400px) 1300px, 100vw" width="1200" height="185" alt="Banner horizontal de la feria" loading="lazy" decoding="async"><figcaption class="cap"><span class="mono mute">Banner horizontal</span></figcaption></figure>
+      <div class="g12 deliv"><div class="lbl"><span class="mono" style="color:var(--c)">Entregables</span></div><ul><li>Dirección visual</li><li>Símbolo y versiones</li><li>Patrón modular</li><li>Campaña en redes y web</li><li>Impresos</li><li>Branding físico del evento</li></ul></div>
+    </div>
+  </article>
+  </div>
+
+  <!-- INTERLUDE · PITALITO -->
+  <section class="sec" id="anatomia" style="--c:#F2B41C">
+    <div class="wrap">
+      <div class="g12 head"><div class="k"><span class="rn" aria-hidden="true"><svg viewBox="0 0 104 104"><path d="M61.99 10.69A42.5 42.5 0 0 1 54 94.45M50 94.45A42.5 42.5 0 0 1 43.02 10.46" fill="none" stroke="currentColor" stroke-width="5"/></svg><b>+</b></span><span class="mono mute">También destacado</span></div><h2>Pitalito 81 años, paso a paso.</h2><p>Cómo se construye una identidad, en cuatro láminas del propio proyecto. Alcaldía de Polonuevo, 2025.</p></div>
+      <div class="anat">
+        <figure class="ri" data-open="pitalito-81" data-cur="Abrir"><div class="pic"><img src="assets/img/pitalito-81-02-1200.jpg" width="1200" height="675" alt="Concepto creativo: la tierra, el sabor y la gente" loading="lazy" decoding="async"></div><figcaption><span class="mono" style="color:var(--c)">01</span><div><b>Concepto</b><span class="p">La tierra, el sabor y la gente.</span></div></figcaption></figure>
+        <figure class="ri" data-open="pitalito-81" data-cur="Abrir"><div class="pic"><img src="assets/img/pitalito-81-03-1200.jpg" width="1200" height="675" alt="Paleta de color y tipografías" loading="lazy" decoding="async"></div><figcaption><span class="mono" style="color:var(--c)">02</span><div><b>Paleta y tipografía</b><span class="p">Mostaza, verde, rojo y crema.</span></div></figcaption></figure>
+        <figure class="ri" data-open="pitalito-81" data-cur="Abrir"><div class="pic"><img src="assets/img/pitalito-81-04-1200.jpg" width="1200" height="675" alt="Elementos gráficos: manos, bollo de yuca y flores" loading="lazy" decoding="async"></div><figcaption><span class="mono" style="color:var(--c)">03</span><div><b>Elementos</b><span class="p">El bollo de yuca en manos que lo preparan.</span></div></figcaption></figure>
+        <figure class="ri" data-open="pitalito-81" data-cur="Abrir"><div class="pic fit"><img src="assets/img/pitalito-81-06-1200.jpg" width="1200" height="1500" alt="Afiche principal Cumpleaños de Pitalito 81 años" loading="lazy" decoding="async"></div><figcaption><span class="mono" style="color:var(--c)">04</span><div><b>Afiche</b><span class="p">Tierra de manos que saben a tradición.</span></div></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARA ALEGRA -->
+  <div class="light" id="alegra">
+    <section class="sec">
+      <div class="wrap">
+        <div class="g12 head"><div class="k"><span class="rn" aria-hidden="true"><svg viewBox="0 0 104 104"><path d="M61.99 10.69A42.5 42.5 0 0 1 54 94.45M50 94.45A42.5 42.5 0 0 1 43.02 10.46" fill="none" stroke="currentColor" stroke-width="5"/></svg><b>A</b></span><span class="mono mute">Para Alegra</span></div><h2>Lo que Alegra necesita, ya lo he hecho.</h2><p>Alegra le habla a pymes y contadores en cuatro países, con la IA en el centro y un marketing que produce rápido. Cada punto lleva a un proyecto que lo prueba.</p></div>
+        <div class="rows">
+          <div class="g12 row"><span class="mono mute n">01</span><h3>Campañas en cuatro países con una sola línea gráfica</h3><p>Concepto, sistema y despliegue en redes, afiches, credenciales y merch. Una identidad que se adapta a cada canal sin perder consistencia.</p><a class="proof" href="#caso-carnaval"><img src="assets/img/carnaval-2026-06-1200.jpg" width="1080" height="1350" alt="Carnaval de Polonuevo 2026" loading="lazy" decoding="async"><span><em>Prueba</em><b>Carnaval de Polonuevo 2026</b></span></a></div>
+          <div class="g12 row"><span class="mono mute n">02</span><h3>Sistemas que el equipo puede usar sin diseño en cada pedido</h3><p>Un módulo gráfico que genera patrones, piezas y hasta el arco de entrada de un evento. Plantillas reutilizables en Figma y Canva.</p><a class="proof" href="#caso-feria"><img src="assets/img/feria-agroindustrial-11-1200.jpg" width="1200" height="886" alt="Arco de la Feria Agroindustrial" loading="lazy" decoding="async"><span><em>Prueba</em><b>Feria Agroindustrial</b></span></a></div>
+          <div class="g12 row"><span class="mono mute n">03</span><h3>Un equipo que trabaja con IA en el centro</h3><p>IA desde la exploración de referentes hasta la producción de gráficos, con la dirección visual y la revisión final a cargo del diseñador.</p><a class="proof" href="#caso-informe"><img src="assets/img/informe-uniatlantico-01-1200.jpg" srcset="assets/img/informe-uniatlantico-01-1200.jpg 1200w, assets/img/informe-uniatlantico-01-2000.jpg 2000w" sizes="76px" width="1200" height="675" alt="Informe de reacreditación" loading="lazy" decoding="async"><span><em>Prueba</em><b>Informe de reacreditación</b></span></a></div>
+          <div class="g12 row"><span class="mono mute n">04</span><h3>Contenido claro para contadores y pymes</h3><p>Una retícula que vuelve legible un informe técnico. El mismo oficio que piden guías, reportes y materiales de onboarding.</p><a class="proof" href="#caso-informe"><img src="assets/img/informe-uniatlantico-05-1200.jpg" width="1200" height="675" alt="Página del informe" loading="lazy" decoding="async"><span><em>Prueba</em><b>Universidad del Atlántico</b></span></a></div>
+          <div class="g12 row"><span class="mono mute n">05</span><h3>Hablarle a la gente con cercanía</h3><p>Campañas para comunidades reales, con personajes, color y un tono que la gente reconoce como propio, sin perder orden ni sistema.</p><button class="proof" type="button" data-open="mes-ninez"><img src="assets/img/mes-ninez-04-1200.jpg" width="1200" height="1500" alt="Mes de la Niñez" loading="lazy" decoding="async"><span><em>Prueba</em><b>Mes de la Niñez</b></span></button></div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ARCHIVO -->
+  <section class="sec" id="archivo">
+    <div class="wrap">
+      <div class="g12 head"><div class="k"><span class="rn" aria-hidden="true"><svg viewBox="0 0 104 104"><path d="M61.99 10.69A42.5 42.5 0 0 1 54 94.45M50 94.45A42.5 42.5 0 0 1 43.02 10.46" fill="none" stroke="currentColor" stroke-width="5"/></svg><b>12</b></span><span class="mono mute">Archivo</span></div><h2>Todos los proyectos</h2><div style="grid-column:span 3;display:flex;flex-direction:column;gap:14px"><p class="mute" style="font-size:15.5px">Doce proyectos publicados entre 2022 y 2026.</p><div class="arch-ctl" role="group" aria-label="Vista del archivo"><button type="button" data-view="list" aria-pressed="true">Lista</button><button type="button" data-view="grid" aria-pressed="false">Mosaico</button></div></div></div>
+      <div id="arch"></div>
+    </div>
+    <div class="peek" id="peek" aria-hidden="true"><img id="peek-img" alt=""></div>
+  </section>
+
+  <!-- OFICIO -->
+  <section class="sec" id="oficio">
+    <div class="wrap">
+      <div class="g12 head"><div class="k"><span class="rn" aria-hidden="true"><svg viewBox="0 0 104 104"><path d="M61.99 10.69A42.5 42.5 0 0 1 54 94.45M50 94.45A42.5 42.5 0 0 1 43.02 10.46" fill="none" stroke="currentColor" stroke-width="5"/></svg><b>O</b></span><span class="mono mute">Oficio</span></div><h2>IA en el proceso. Criterio en el resultado.</h2><p>La IA acelera la exploración y la producción. La dirección visual y la revisión final no se delegan.</p></div>
+      <div class="g12 flow">
+        <div><span class="mono mute">Explorar</span><h3>Referentes y rutas de concepto</h3><p>Búsqueda y contraste de ideas antes de abrir el archivo de diseño.</p><div class="tools"><span>ChatGPT</span><span>Claude</span></div></div>
+        <div><span class="mono mute">Producir</span><h3>Recursos, escalado y gráficos</h3><p>Generación de recursos, escalado de imágenes y apoyo en gráficos de datos.</p><div class="tools"><span>Adobe Firefly</span><span>Nano Banana</span><span>Magnific</span><span>Antigravity</span></div></div>
+        <div class="me"><span class="mono">Dirigir</span><h3>Dirección visual y revisión final</h3><p>Lo que llega al cliente pasó por criterio propio, pieza por pieza.</p><div class="tools"><span>Figma</span><span>Canva</span></div></div>
+      </div>
+      <div class="g12 steps">
+        <div class="step"><div class="rule"></div><span class="mono mute">01</span><h4>Del brief al concepto</h4><p>Una idea que cabe en una frase: #PonteBacano, #SaboresQueUnen, Amor y Gratitud.</p></div>
+        <div class="step"><div class="rule"></div><span class="mono mute">02</span><h4>Sistema visual</h4><p>Paleta, tipografía, lettering, ilustración y elementos con reglas de uso.</p></div>
+        <div class="step"><div class="rule"></div><span class="mono mute">03</span><h4>Despliegue</h4><p>Redes, web, afiches, programación, recorridos, credenciales, merch, impresos y video.</p></div>
+        <div class="step"><div class="rule"></div><span class="mono mute">04</span><h4>Plantillas para el equipo</h4><p>Figma y Canva, para que el equipo produzca y actualice contenido con autonomía.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PERFIL -->
+  <section class="sec" id="perfil">
+    <div class="wrap">
+      <div class="g12 prof">
+        <div class="txt">
+          <span class="mono mute">Perfil</span>
+          <p class="big rv" style="margin-top:18px">Diseñador gráfico desde 2018. Convierto briefs en conceptos y sistemas visuales que se adaptan a distintos formatos, canales y audiencias.</p>
+          <p class="sm">Experiencia en campañas, identidad visual, piezas para redes sociales, diseño editorial y video. Creo plantillas reutilizables en Figma y Canva para que los equipos produzcan con autonomía. Formación en gestión de proyectos y metodologías Agile.</p>
+        </div>
+        <dl>
+          <div><dt class="mono">Base</dt><dd>Barranquilla, Colombia</dd></div>
+          <div><dt class="mono">Disciplinas</dt><dd>Identidad · Campañas · Redes · Editorial · Video · Ilustración</dd></div>
+          <div><dt class="mono">Diseño</dt><dd>Figma · Canva</dd></div>
+          <div><dt class="mono">IA</dt><dd>ChatGPT · Claude · Adobe Firefly · Nano Banana · Magnific · Antigravity</dd></div>
+          <div><dt class="mono">Formación</dt><dd>Diseño gráfico · Gestión de proyectos y Agile</dd></div>
+        </dl>
+      </div>
+      <div class="g12 figs">
+        <div><b data-count="2018">2018</b><span class="mono mute">Año de inicio</span></div>
+        <div><b data-count="12">12</b><span class="mono mute">Proyectos publicados</span></div>
+        <div><b data-count="176">176</b><span class="mono mute">Piezas en el portafolio</span></div>
+        <div><b data-count="3">3</b><span class="mono mute">Clientes institucionales</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="contact" id="contacto">
+    <div class="wrap">
+      <span class="mono mute">Contacto</span>
+      <h2 style="margin-top:20px"><svg aria-hidden="true"><use href="#mk"/></svg>Hablemos.</h2>
+      <div class="mail">
+        <span class="addr" id="addr">leyderh3@gmail.com</span>
+        <button class="btn" type="button" data-copy>Copiar correo</button>
+        <a class="btn line" href="https://wa.me/573023158677" target="_blank" rel="noopener">WhatsApp</a>
+        <span class="mono" id="toast" role="status" aria-live="polite"></span>
+      </div>
+      <div class="foot mono mute">
+        <span>Leyder Hernández Cervantes</span>
+        <span>+57 302 315 8677</span>
+        <span>Barranquilla, Colombia</span>
+        <a href="#inicio">Volver arriba ↑</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="cur" id="cur" aria-hidden="true"><span></span></div>
+
+<dialog id="dlg" aria-labelledby="dlg-title">
+  <div class="dlg" id="dlg-scroll">
+    <div class="dlg-bar"><div class="wrap">
+      <svg width="22" height="22" aria-hidden="true"><use href="#mk"/></svg>
+      <span class="t mono mute" id="dlg-bar-t"></span>
+      <button class="icon" type="button" id="dlg-prev" aria-label="Proyecto anterior">←</button>
+      <button class="icon" type="button" id="dlg-nx" aria-label="Proyecto siguiente">→</button>
+      <button class="icon" type="button" id="dlg-close" aria-label="Cerrar">✕</button>
+    </div></div>
+    <div class="wrap">
+      <div class="g12 dlg-head">
+        <div class="l"><span class="mono mute" id="dlg-k"></span><h2 id="dlg-title"></h2><p class="concept" id="dlg-concept"></p><p class="txt" id="dlg-text"></p></div>
+        <div class="r" id="dlg-r"></div>
+      </div>
+      <div class="gal" id="dlg-gal"></div>
+      <button class="dlg-next" type="button" id="dlg-next"><span class="mono mute">Siguiente proyecto</span><b id="dlg-next-t"></b></button>
+    </div>
+  </div>
+</dialog>
+
+<script>
+(()=>{
+document.documentElement.classList.add("js");
+const MAN={"pitalito-81-01":{"w":1200,"h":675,"big":false},"pitalito-81-02":{"w":1200,"h":675,"big":false},"pitalito-81-03":{"w":1200,"h":675,"big":false},"pitalito-81-04":{"w":1200,"h":675,"big":false},"pitalito-81-05":{"w":1200,"h":675,"big":true},"pitalito-81-06":{"w":1200,"h":1500,"big":false},"pitalito-81-07":{"w":1200,"h":1500,"big":false},"pitalito-81-08":{"w":844,"h":1500,"big":false},"pitalito-81-09":{"w":844,"h":1500,"big":false},"pitalito-81-10":{"w":1200,"h":676,"big":false},"pitalito-81-11":{"w":1200,"h":406,"big":false},"feria-agroindustrial-00":{"w":1200,"h":704,"big":true},"feria-agroindustrial-01":{"w":1200,"h":487,"big":false},"feria-agroindustrial-02":{"w":1200,"h":384,"big":false},"feria-agroindustrial-03":{"w":1200,"h":505,"big":true},"feria-agroindustrial-04":{"w":1200,"h":185,"big":true},"feria-agroindustrial-05":{"w":1200,"h":640,"big":false},"feria-agroindustrial-06":{"w":1200,"h":1500,"big":false},"feria-agroindustrial-07":{"w":1200,"h":1500,"big":false},"feria-agroindustrial-08":{"w":1200,"h":1500,"big":false},"feria-agroindustrial-09":{"w":1200,"h":1500,"big":false},"feria-agroindustrial-10":{"w":1200,"h":694,"big":false},"feria-agroindustrial-11":{"w":1200,"h":886,"big":false},"informe-uniatlantico-00":{"w":1200,"h":675,"big":true},"informe-uniatlantico-01":{"w":1200,"h":675,"big":true},"informe-uniatlantico-02":{"w":1200,"h":675,"big":false},"informe-uniatlantico-03":{"w":1200,"h":675,"big":false},"informe-uniatlantico-04":{"w":1200,"h":675,"big":false},"informe-uniatlantico-05":{"w":1200,"h":675,"big":false},"informe-uniatlantico-06":{"w":1200,"h":675,"big":false},"informe-uniatlantico-07":{"w":1200,"h":675,"big":false},"informe-uniatlantico-08":{"w":1200,"h":675,"big":false},"informe-uniatlantico-09":{"w":1200,"h":675,"big":false},"informe-uniatlantico-10":{"w":1200,"h":675,"big":false},"informe-uniatlantico-11":{"w":1200,"h":675,"big":false},"informe-uniatlantico-12":{"w":1200,"h":675,"big":false},"informe-uniatlantico-13":{"w":1200,"h":675,"big":false},"barca-del-arte-00":{"w":1200,"h":674,"big":true},"barca-del-arte-01":{"w":1200,"h":674,"big":true},"barca-del-arte-02":{"w":1170,"h":1431,"big":false},"barca-del-arte-03":{"w":876,"h":1073,"big":false},"barca-del-arte-04":{"w":1200,"h":867,"big":false},"barca-del-arte-05":{"w":1200,"h":587,"big":false},"barca-del-arte-06":{"w":1200,"h":1200,"big":false},"barca-del-arte-07":{"w":1200,"h":1200,"big":false},"barca-del-arte-08":{"w":1200,"h":1200,"big":false},"barca-del-arte-09":{"w":1200,"h":1200,"big":false},"barca-del-arte-10":{"w":1200,"h":1200,"big":false},"barca-del-arte-11":{"w":1200,"h":1200,"big":false},"barca-del-arte-12":{"w":1200,"h":1200,"big":false},"barca-del-arte-13":{"w":1200,"h":1200,"big":false},"barca-del-arte-14":{"w":1200,"h":646,"big":false},"barca-del-arte-15":{"w":679,"h":1500,"big":false},"carnaval-2026-00":{"w":1200,"h":527,"big":true},"carnaval-2026-01":{"w":1200,"h":600,"big":true},"carnaval-2026-02":{"w":1200,"h":800,"big":false},"carnaval-2026-03":{"w":1199,"h":1312,"big":false},"carnaval-2026-04":{"w":1200,"h":1500,"big":false},"carnaval-2026-05":{"w":1200,"h":1500,"big":false},"carnaval-2026-06":{"w":1080,"h":1350,"big":false},"carnaval-2026-07":{"w":1080,"h":1350,"big":false},"carnaval-2026-08":{"w":1080,"h":1350,"big":false},"carnaval-2026-09":{"w":1080,"h":1350,"big":false},"carnaval-2026-10":{"w":1080,"h":1350,"big":false},"carnaval-2026-11":{"w":1080,"h":1350,"big":false},"generos-textuales-00":{"w":1200,"h":512,"big":false},"desfile-navideno-00":{"w":1200,"h":639,"big":false},"desfile-navideno-01":{"w":1200,"h":1200,"big":false},"desfile-navideno-02":{"w":1200,"h":1200,"big":false},"desfile-navideno-03":{"w":1200,"h":1200,"big":false},"desfile-navideno-04":{"w":1200,"h":1200,"big":false},"desfile-navideno-05":{"w":1200,"h":225,"big":false},"leo-y-ema-00":{"w":1200,"h":834,"big":false},"leo-y-ema-01":{"w":1200,"h":685,"big":false},"leo-y-ema-02":{"w":1200,"h":834,"big":false},"leo-y-ema-03":{"w":1200,"h":834,"big":false},"leo-y-ema-04":{"w":1200,"h":932,"big":false},"leo-y-ema-05":{"w":1200,"h":834,"big":false},"festival-cerdo-yuca-00":{"w":1200,"h":675,"big":false},"festival-cerdo-yuca-01":{"w":1200,"h":675,"big":false},"festival-cerdo-yuca-02":{"w":1200,"h":344,"big":false},"festival-cerdo-yuca-03":{"w":1200,"h":675,"big":false},"festival-cerdo-yuca-04":{"w":1200,"h":420,"big":false},"festival-cerdo-yuca-05":{"w":1200,"h":546,"big":false},"mes-ninez-00":{"w":1200,"h":527,"big":false},"mes-ninez-01":{"w":1200,"h":675,"big":false},"mes-ninez-02":{"w":1200,"h":800,"big":false},"mes-ninez-03":{"w":1200,"h":800,"big":false},"mes-ninez-04":{"w":1200,"h":1500,"big":false},"mes-ninez-05":{"w":1200,"h":1500,"big":false},"joven-mania-00":{"w":1200,"h":675,"big":false},"joven-mania-01":{"w":1200,"h":675,"big":false},"joven-mania-02":{"w":1200,"h":675,"big":false},"joven-mania-03":{"w":1200,"h":675,"big":false},"joven-mania-04":{"w":1200,"h":822,"big":false},"joven-mania-05":{"w":1200,"h":674,"big":false},"carnaval-2025-00":{"w":1200,"h":734,"big":false},"carnaval-2025-01":{"w":1200,"h":492,"big":false},"carnaval-2025-02":{"w":1200,"h":614,"big":false},"carnaval-2025-03":{"w":1200,"h":800,"big":false},"carnaval-2025-04":{"w":1200,"h":800,"big":false},"carnaval-2025-05":{"w":976,"h":1500,"big":false}};
+const A=[
+ {id:"carnaval-2026",t:"Carnaval de Polonuevo 2026",y:2026,d:"Identidad · Campaña · Merch",anchor:"#caso-carnaval",cover:"00",feat:1},
+ {id:"barca-del-arte",t:"La Barca del Arte",y:2022,d:"Rediseño · Ilustración",anchor:"#caso-barca",cover:"00",feat:1},
+ {id:"informe-uniatlantico",t:"Informe de reacreditación",y:2026,d:"Editorial · Información",anchor:"#caso-informe",cover:"00",feat:1},
+ {id:"feria-agroindustrial",t:"Feria Agroindustrial",y:2025,d:"Sistema modular · Campaña",anchor:"#caso-feria",cover:"00",feat:1},
+ {id:"pitalito-81",t:"Pitalito 81 años",y:2025,d:"Identidad · Campaña",cover:"05",client:"Alcaldía de Polonuevo",concept:"Tierra de manos que saben a tradición.",
+  text:"Para celebrar los 81 años de Pitalito desarrollé una identidad inspirada en la tierra, el sabor y su gente. El bollo de yuca fue el punto de partida: una tradición que representa el trabajo y el legado de quienes lo preparan.",
+  deliver:"Concepto, paleta y tipografías, elementos gráficos, afiche, programación, cuenta regresiva, merch",imgs:["05","06","01","02","03","04","07","08","09","10","11"]},
+ {id:"joven-mania",t:"Joven Manía",y:2025,d:"Identidad · Lettering · Merch",cover:"00",client:"Semana de la Juventud de Polonuevo",concept:"Lettering propio, colores vivos y aire retro.",
+  text:"Para la Semana de la Juventud de Polonuevo 2025 desarrollé la identidad de Joven Manía con un lettering propio, colores vivos y recursos gráficos de aire retro. Llevé la propuesta a las piezas de difusión y a productos promocionales como camisetas, tulas y bolígrafos.",
+  deliver:"Lettering, paleta y tipografías, elementos gráficos, tratamiento fotográfico, afiches, merch",imgs:["00","01","02","03","04","05"]},
+ {id:"festival-cerdo-yuca",t:"Festival del Cerdo y la Yuca",y:2025,d:"Identidad · Campaña",cover:"00",client:"Quinta edición del festival",concept:"#SaboresQueUnen",
+  text:"Para la quinta edición del Festival del Cerdo y la Yuca desarrollé la identidad visual bajo el concepto #SaboresQueUnen. La llevé a las piezas de campaña y difusión, la programación, las aplicaciones impresas y de branding.",
+  deliver:"Logotipo y versiones, iconografía, texturas, campaña, programación, impresos",imgs:["00","01","03","02","04","05"]},
+ {id:"mes-ninez",t:"Mes de la Niñez",y:2025,d:"Campaña · Ilustración",cover:"04",client:"Alcaldía de Polonuevo",concept:"Alimenta tu fuerza, activa tu sonrisa.",
+  text:"Para el Mes de la Niñez 2025 desarrollé la identidad visual de “Alimenta tu fuerza, activa tu sonrisa” y la apliqué en las piezas de comunicación de la campaña: publicaciones para redes, material promocional y piezas para actividades.",
+  deliver:"Identidad, personajes, programación, redes, pendón y tulas",imgs:["04","05","00","01","02","03"]},
+ {id:"carnaval-2025",t:"Carnaval de Polonuevo 2025",y:2025,d:"Identidad · Campaña · Merch",cover:"00",client:"Alcaldía de Polonuevo",concept:"Una imagen propia para el carnaval.",
+  text:"Desarrollé la identidad visual del Carnaval de Polonuevo 2025 para acompañar la comunicación de esta celebración y darle una imagen propia. A partir de ella creé piezas gráficas para presentar y difundir sus actividades.",
+  deliver:"Identidad, elementos y personajes, redes, camisetas, gorras y banderas, credenciales",imgs:["00","01","05","02","03","04"]},
+ {id:"desfile-navideno",t:"Desfile Navideño",y:2024,d:"Campaña · Merch",cover:"01",client:"Alcaldía de Polonuevo",concept:"Amor y Gratitud.",
+  text:"Para el desfile navideño de 2024 trabajé el concepto “Amor y Gratitud”, con una imagen cálida y familiar que invitaba a la gente de Polonuevo a recibir la Navidad juntos. Además de la pieza principal, diseñé materiales para difundir el evento y llevé la identidad a impresos, camisas, gorras y otros elementos de la celebración.",
+  deliver:"Pieza principal, carrusel de artistas, mapa de recorrido, impresos, camisas y gorras",imgs:["00","01","02","03","04","05"]},
+ {id:"leo-y-ema",t:"Explora con Leo y Ema",y:2023,d:"Ilustración · Personajes",cover:"01",client:"Juego didáctico para terapias de niños con TDAH",concept:"Una expedición en la jungla.",
+  text:"“Explora con Leo y Ema” es un juego didáctico para el apoyo en terapias de niños con TDAH. El concepto elegido fue “una expedición en la jungla”, para comunicar que los niños se sumergen en una aventura de exploración llena de desafíos por superar.",
+  deliver:"Logotipo, personajes, expresiones, ilustración de fauna, tipografía",imgs:["00","01","02","03","04","05"]},
+ {id:"generos-textuales",t:"Géneros textuales y blended learning",y:2022,d:"Editorial · Identidad",cover:"00",client:"Proyecto doctoral",concept:"Una sola línea gráfica para toda la sustentación.",
+  text:"Me contrataron para crear la identidad visual de un proyecto doctoral y desarrollar los materiales necesarios para la sustentación de la tesis. El trabajo incluyó el diseño editorial de libros y presentaciones, además de otras piezas, todas bajo una misma línea gráfica.",
+  deliver:"Identidad, libros, presentaciones",imgs:["00"]}
+];
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const esc=s=>String(s).replace(/&/g,"&amp;").replace(/"/g,"&quot;").replace(/</g,"&lt;");
+const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+const fine=matchMedia("(hover:hover) and (pointer:fine)").matches;
+const src=k=>`assets/img/${k}-1200.jpg`;
+function im(k,alt,o={}){const m=MAN[k];if(!m)return"";const ss=m.big?` srcset="assets/img/${k}-1200.jpg 1200w, assets/img/${k}-2000.jpg 2000w" sizes="${o.sizes||"100vw"}"`:"";return `<img src="${src(k)}"${ss} width="${m.w}" height="${m.h}" alt="${esc(alt)}" loading="lazy" decoding="async"${o.cls?` class="${o.cls}"`:""}>`;}
+
+/* HERO: monogram window */
+const scene=$("#scene"),win=$("#win"),ui=$("#hero-ui"),mkw=$("#mk-win"),pin=scene.querySelector(".pin");
+let cx0=0,cy0=0,r0=0,W=0,H=0,Rmax=0,sceneTop=0,sceneLen=1;
+const clamp=(v,a=0,b=1)=>Math.min(b,Math.max(a,v));
+const ease=t=>t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2;
+function measure(){
+  const prev=ui.style.transform;ui.style.transform="none";
+  const r=mkw.getBoundingClientRect(),p=pin.getBoundingClientRect();
+  cx0=r.left+r.width/2-p.left;cy0=r.top+r.height/2-p.top;r0=Math.max(2,r.width*(35.5/104));
+  W=p.width;H=p.height;Rmax=Math.hypot(W,H)/2+8;
+  sceneTop=scene.getBoundingClientRect().top+scrollY;sceneLen=Math.max(1,scene.offsetHeight-H);
+  ui.style.transform=prev;
+}
+function heroFrame(){
+  const p=clamp((scrollY-sceneTop)/sceneLen),e=ease(clamp(p/.92));
+  const cx=cx0+(W/2-cx0)*e,cy=cy0+(H/2-cy0)*e,R=r0*Math.pow(Rmax/r0,e);
+  win.style.clipPath=`circle(${R.toFixed(1)}px at ${cx.toFixed(1)}px ${cy.toFixed(1)}px)`;
+  win.style.setProperty("--ws",(1.18-.18*e).toFixed(3));
+  const u=clamp(1-p/.4);ui.style.opacity=u.toFixed(3);ui.style.transform=`translateY(${(-p*70).toFixed(1)}px)`;ui.style.visibility=u<=0?"hidden":"visible";
+  const c=clamp((p-.78)/.18);pin.style.setProperty("--capo",c.toFixed(3));
+}
+let heroOn=!reduce;
+if(!heroOn)document.documentElement.classList.add("motion-off");
+
+/* Header: active case + progress */
+const topEl=$("#top"),prog=$("#prog"),now=$("#now"),cases=$$(".case");
+function headerFrame(){
+  const mid=scrollY+innerHeight*.4;let act=null;
+  for(const c of cases){const t=c.offsetTop,h=c.offsetHeight;if(mid>=t&&mid<t+h){act=c;break;}}
+  if(scrollY<scene.offsetTop+scene.offsetHeight*.55&&heroOn)act=null;
+  if(act){topEl.classList.add("in-case");topEl.style.setProperty("--c",getComputedStyle(act).getPropertyValue("--c"));
+    const t=act.offsetTop,h=act.offsetHeight;prog.style.transform=`scaleX(${clamp((scrollY+innerHeight-t)/(h)).toFixed(4)})`;
+    const label=`Caso ${act.dataset.case} · ${act.dataset.title}`;if(now.textContent!==label)now.textContent=label;}
+  else{topEl.classList.remove("in-case");prog.style.transform="scaleX(0)";}
+}
+let ticking=false;
+function onScroll(){if(ticking)return;ticking=true;requestAnimationFrame(()=>{if(heroOn)heroFrame();headerFrame();ticking=false;});}
+addEventListener("scroll",onScroll,{passive:true});
+addEventListener("resize",()=>{if(heroOn){measure();heroFrame();}headerFrame();});
+function initHero(){if(heroOn){measure();heroFrame();}headerFrame();}
+if(document.fonts&&document.fonts.ready)document.fonts.ready.then(initHero);
+addEventListener("load",initHero);initHero();
+win.addEventListener("click",()=>$("#caso-carnaval").scrollIntoView({behavior:reduce?"auto":"smooth"}));
+
+/* Reveal */
+if("IntersectionObserver" in window&&!reduce){
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}}),{rootMargin:"0px 0px -8% 0px"});
+  $$(".rv,.ri,.rule").forEach(el=>io.observe(el));
+}else $$(".rv,.ri,.rule").forEach(el=>el.classList.add("in"));
+
+/* Filmstrips: buttons + drag */
+$$(".strip").forEach(s=>{const tr=s.querySelector(".track");
+  s.querySelectorAll("[data-strip]").forEach(b=>b.addEventListener("click",()=>tr.scrollBy({left:+b.dataset.strip*tr.clientWidth*.7,behavior:reduce?"auto":"smooth"})));
+  let down=false,sx=0,sl=0,moved=0;
+  tr.addEventListener("pointerdown",e=>{if(e.pointerType!=="mouse")return;down=true;moved=0;sx=e.clientX;sl=tr.scrollLeft;});
+  addEventListener("pointermove",e=>{if(!down)return;const dx=e.clientX-sx;moved=Math.abs(dx);if(moved>4)tr.classList.add("drag");tr.scrollLeft=sl-dx;});
+  addEventListener("pointerup",()=>{if(!down)return;down=false;setTimeout(()=>tr.classList.remove("drag"),0);});
+  tr.addEventListener("keydown",e=>{if(e.key==="ArrowRight"){tr.scrollBy({left:tr.clientWidth*.5});e.preventDefault();}if(e.key==="ArrowLeft"){tr.scrollBy({left:-tr.clientWidth*.5});e.preventDefault();}});
+});
+
+/* Before / after */
+const ba=$("#ba"),bar=$("#ba-r");
+if(ba&&bar){const set=v=>ba.style.setProperty("--x",v+"%");bar.addEventListener("input",()=>set(bar.value));set(bar.value);}
+
+/* Archive */
+const arch=$("#arch");let view="list";
+function renderArch(){
+  if(view==="list"){arch.innerHTML=`<div class="index" id="index">${A.map(p=>{const tag=p.anchor?"a":"button";const at=p.anchor?`href="${p.anchor}"`:`type="button" data-open="${p.id}"`;return `<${tag} class="ix" ${at} data-peek="${p.id}-${p.cover}">${im(p.id+"-"+p.cover,"",{cls:"th"})}<span class="mono mute y">${p.y}</span><span class="t">${p.t}${p.feat?'<span class="star">Caso</span>':""}</span><span class="mono mute d">${p.d}</span><span class="ar" aria-hidden="true">${p.anchor?"↑":"→"}</span></${tag}>`;}).join("")}</div>`;bindPeek();}
+  else{arch.innerHTML=`<div class="mosaic">${A.map(p=>{const tag=p.anchor?"a":"button";const at=p.anchor?`href="${p.anchor}"`:`type="button" data-open="${p.id}"`;return `<${tag} class="mo" ${at} data-cur="${p.anchor?"Ir al caso":"Abrir"}"><div class="pic">${im(p.id+"-"+p.cover,p.t)}</div><div class="r"><b>${p.t}</b><span class="mono mute">${p.y}</span></div><span class="mono mute">${p.d}</span></${tag}>`;}).join("")}</div>`;}
+  $$(".arch-ctl button").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.view===view)));
+}
+$$(".arch-ctl button").forEach(b=>b.addEventListener("click",()=>{view=b.dataset.view;renderArch();}));
+const peek=$("#peek"),peekImg=$("#peek-img");let px=0,py=0,tx=0,ty=0,raf=0;
+function loop(){px+=(tx-px)*.16;py+=(ty-py)*.16;peek.style.transform=`translate3d(${(px+28).toFixed(1)}px,${(py-140).toFixed(1)}px,0) rotate(${clamp((tx-px)*.04,-4,4).toFixed(2)}deg)`;raf=requestAnimationFrame(loop);}
+function bindPeek(){const ix=$("#index");if(!ix||!fine)return;
+  ix.addEventListener("mousemove",e=>{tx=e.clientX;ty=e.clientY;const r=e.target.closest("[data-peek]");if(!r)return;const k=r.dataset.peek;if(peekImg.dataset.k!==k){peekImg.src=src(k);peekImg.dataset.k=k;}if(!peek.classList.contains("on")){px=tx;py=ty;peek.classList.add("on");if(!raf&&!reduce)loop();if(reduce)peek.style.transform=`translate3d(${tx+28}px,${ty-140}px,0)`;}});
+  ix.addEventListener("mouseleave",()=>{peek.classList.remove("on");cancelAnimationFrame(raf);raf=0;});}
+renderArch();
+
+/* Dialog (archive projects) */
+const dlg=$("#dlg"),DL=A.filter(p=>!p.anchor);let op=-1;
+function show(id,ev){const k=DL.findIndex(p=>p.id===id);if(k<0)return;op=k;const p=DL[k];
+  if(ev&&ev.clientX!==undefined&&!dlg.open){dlg.style.setProperty("--ox",ev.clientX+"px");dlg.style.setProperty("--oy",ev.clientY+"px");}
+  $("#dlg-bar-t").textContent=`${p.t} · ${p.y}`;$("#dlg-k").textContent=`Archivo · ${p.d}`;
+  $("#dlg-title").textContent=p.t;$("#dlg-concept").textContent=p.concept;$("#dlg-text").textContent=p.text;
+  $("#dlg-r").innerHTML=`<dl class="kv"><div><dt class="mono">Cliente</dt><dd>${p.client}</dd></div><div><dt class="mono">Año</dt><dd>${p.y}</dd></div><div><dt class="mono">Entregables</dt><dd>${p.deliver}</dd></div></dl>`;
+  $("#dlg-gal").innerHTML=p.imgs.map(n=>{const key=p.id+"-"+n,m=MAN[key];if(!m)return"";const w=(m.w/m.h>1.45||p.imgs.length===1);return im(key,`${p.t}, pieza`,{cls:w?"w":""});}).join("");
+  $("#dlg-next-t").textContent=DL[(op+1)%DL.length].t;$("#dlg-scroll").scrollTop=0;
+  if(!dlg.open){dlg.showModal();document.body.style.overflow="hidden";}}
+dlg.addEventListener("close",()=>{document.body.style.overflow="";});
+document.addEventListener("click",e=>{const t=e.target.closest("[data-open]");if(t){e.preventDefault();show(t.dataset.open,e);}});
+document.addEventListener("keydown",e=>{const t=e.target.closest&&e.target.closest("figure[data-open]");if(t&&(e.key==="Enter"||e.key===" ")){e.preventDefault();show(t.dataset.open);}if(!dlg.open)return;if(e.key==="ArrowRight")show(DL[(op+1)%DL.length].id);if(e.key==="ArrowLeft")show(DL[(op-1+DL.length)%DL.length].id);});
+$$("figure[data-open]").forEach(f=>{f.tabIndex=0;f.setAttribute("role","button");});
+$("#dlg-close").onclick=()=>dlg.close();
+$("#dlg-prev").onclick=()=>show(DL[(op-1+DL.length)%DL.length].id);
+$("#dlg-nx").onclick=()=>show(DL[(op+1)%DL.length].id);
+$("#dlg-next").onclick=()=>show(DL[(op+1)%DL.length].id);
+dlg.addEventListener("click",e=>{if(e.target===dlg)dlg.close();});
+
+/* Cursor: the logo ring */
+if(fine&&!reduce){const cur=$("#cur"),lab=cur.querySelector("span");let cx=0,cy=0,mx=-99,my=-99;
+  addEventListener("mousemove",e=>{mx=e.clientX;my=e.clientY;cur.classList.add("on");const t=e.target.closest&&e.target.closest("[data-cur]");if(t&&!dlg.open){cur.classList.add("big");lab.textContent=t.dataset.cur;}else cur.classList.remove("big");},{passive:true});
+  document.addEventListener("mouseleave",()=>cur.classList.remove("on"));
+  (function f(){cx+=(mx-cx)*.22;cy+=(my-cy)*.22;cur.style.transform=`translate3d(${cx.toFixed(1)}px,${cy.toFixed(1)}px,0)`;requestAnimationFrame(f);})();}
+
+/* Copy email */
+$$("[data-copy]").forEach(b=>b.addEventListener("click",()=>{const t="leyderh3@gmail.com",toast=$("#toast");
+  const done=m=>{toast.textContent=m;setTimeout(()=>toast.textContent="",2600);};
+  const sel=()=>{const r=document.createRange();r.selectNodeContents($("#addr"));const s=getSelection();s.removeAllRanges();s.addRange(r);done("Selecciónalo y cópialo");};
+  if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(t).then(()=>done("Correo copiado"),sel);else sel();}));
+
+/* Local time */
+(function tick(){try{const f=new Intl.DateTimeFormat("es-CO",{timeZone:"America/Bogota",hour:"numeric",minute:"2-digit"});$("#clock").textContent="Barranquilla · "+f.format(new Date());}catch(e){}setTimeout(tick,30000);})();
+})();
+</script>
+</body>
+</html>

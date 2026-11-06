@@ -1,0 +1,12 @@
+# Sistema
+.DS_Store
+Thumbs.db
+# Secretos
+.env
+.env.*
+*.pem
+*.key
+credentials.json
+settings.local.json
+# Archivos de prueba
+_test.html

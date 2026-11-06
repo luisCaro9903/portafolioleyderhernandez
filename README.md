@@ -1,0 +1,49 @@
+# Portafolio Leyder Hernández · v3
+
+Sitio estático. Abrir `index.html` en el navegador. No necesita build ni servidor.
+
+## Estructura
+
+- `index.html`: todo el sitio (HTML, CSS y JS en un solo archivo, sin librerías).
+- `assets/img/`: 102 imágenes optimizadas. Nombre: `{proyecto}-{nn}-1200.jpg`. Las de gran formato también tienen `-2000.jpg` y se sirven con `srcset`.
+- Fuente de las imágenes: https://leyderh3.myportfolio.com (descargadas el 2026-11-06).
+- Respaldo de la versión anterior: `../2026-11-06-portfolio-leyder-hernandez-v2-respaldo.html`.
+
+## Curaduría
+
+Casos destacados (4), elegidos por versatilidad y no solo por impacto visual:
+
+1. **Carnaval de Polonuevo 2026**: dirección de arte, concepto y consistencia en serie (6 eventos, una estructura).
+2. **La Barca del Arte**: rediseño de identidad con antes/después y evidencia en sitio.
+3. **Informe de reacreditación (Universidad del Atlántico)**: editorial, arquitectura de información e IA en el proceso.
+4. **Feria Agroindustrial**: sistema modular que llega al espacio físico (foto del arco de entrada).
+
+**Pitalito 81 años** queda como "También destacado". Tiene la mejor documentación del sistema (concepto, paleta, elementos, afiche), pero se superpone con el Carnaval: mismo cliente, mismo tipo de encargo. Se presenta como secuencia de construcción en 4 láminas.
+
+Los 12 proyectos siguen en el Archivo (vista lista o mosaico). Ningún proyecto se eliminó.
+
+## Reglas de veracidad
+
+- Los textos de contexto, reto y concepto salen de las descripciones originales de Leyder o de lo visible en las piezas. No hay métricas, testimonios, bocetos ni resultados inventados.
+- **Fotografía en sitio**: solo dos imágenes muestran implementación real. Son el afiche de La Barca durante una actividad y el arco de entrada de la Feria.
+- **Mockup**: se marca así toda pieza presentada en render (merch, credenciales, teléfonos, boletas). No implica que se haya producido.
+- "Identidad anterior" en La Barca: es la única pieza del proyecto que no usa el logotipo nuevo, y la descripción original dice que la página muestra la identidad anterior.
+- Las paletas se tomaron a ojo de las piezas, no de los archivos fuente.
+
+## Sistema de movimiento
+
+Un solo lenguaje: el monograma.
+
+- El anillo se dibuja y la H se arma al cargar.
+- El hueco del monograma es una ventana que se abre con el scroll hacia el caso 01.
+- El cursor es el anillo del logo.
+- El número de cada sección va dentro del anillo con sus dos cortes.
+- Los proyectos del archivo se abren como un círculo que crece desde el clic.
+
+Todo respeta `prefers-reduced-motion`. Las animaciones de entrada solo mueven el contenido. Nada queda invisible esperando el scroll.
+
+## Pendiente
+
+- El brief llegó cortado en la sección 7 (microinteracciones). Si había requisitos después de ese punto, faltan por revisar.
+- Confirmar con Leyder la autorización para publicar sus datos de contacto antes de subir el sitio.
+- `og:image` usa una ruta relativa. Al publicar en un dominio, cambiarla a URL absoluta.
