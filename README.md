@@ -1,4 +1,4 @@
-# Portafolio Leyder Hernández · v3
+# Portafolio Leyder Hernández · v4
 
 Sitio estático. Abrir `index.html` en el navegador. No necesita build ni servidor.
 
@@ -30,6 +30,13 @@ Los 12 proyectos siguen en el Archivo (vista lista o mosaico). Ningún proyecto 
 - "Identidad anterior" en La Barca: es la única pieza del proyecto que no usa el logotipo nuevo, y la descripción original dice que la página muestra la identidad anterior.
 - Las paletas se tomaron a ojo de las piezas, no de los archivos fuente.
 
+## Interacción
+
+- **Visor de imágenes**: toda imagen de un caso se abre a pantalla completa (versión 2000 px cuando existe). Flechas, teclado y deslizar en celular; tocar para acercar y recorrer el detalle.
+- **Anatomía del informe**: los números de la lámina son botones; cada uno abre su descripción. En escritorio la leyenda lateral está sincronizada.
+- **Menú en celular**: botón "Menú" bajo 980 px, navegación a pantalla completa.
+- **Capacidades**: sección genérica (sirve para cualquier empresa o cliente), cada capacidad enlaza al proyecto que la prueba.
+
 ## Sistema de movimiento
 
 Un solo lenguaje: el monograma.
@@ -43,6 +50,8 @@ Un solo lenguaje: el monograma.
 Todo respeta `prefers-reduced-motion`. Las animaciones de entrada solo mueven el contenido. Nada queda invisible esperando el scroll.
 
 ## Pendiente
+
+- **Foto de perfil**: el espacio está listo en la sección Perfil (retrato dentro del anillo del monograma, blanco y negro que pasa a color al pasar el cursor). Guardar la foto original y procesarla a `assets/img/leyder-retrato-900.jpg` (900×900, recortada al círculo). Mientras no exista, la sección se reacomoda sin hueco.
 
 - El brief llegó cortado en la sección 7 (microinteracciones). Si había requisitos después de ese punto, faltan por revisar.
 - Confirmar con Leyder la autorización para publicar sus datos de contacto antes de subir el sitio.

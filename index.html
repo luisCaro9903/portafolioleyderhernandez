@@ -19,7 +19,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <link rel="preload" as="image" href="assets/img/carnaval-2026-00-2000.jpg" media="(min-width:701px)">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","name":"Leyder Hernández Cervantes","jobTitle":"Diseñador gráfico","email":"mailto:leyderh3@gmail.com","telephone":"+57 302 315 8677","address":{"@type":"PostalAddress","addressLocality":"Barranquilla","addressCountry":"CO"},"knowsAbout":["Identidad visual","Dirección de arte","Campañas","Diseño editorial","Ilustración","IA aplicada al diseño"]}
+{"@context":"https://schema.org","@type":"Person","name":"Leyder Hernández Cervantes","jobTitle":"Diseñador gráfico","email":"mailto:leyderh3@gmail.com","telephone":"+57 3023158677","address":{"@type":"PostalAddress","addressLocality":"Barranquilla","addressCountry":"CO"},"knowsAbout":["Identidad visual","Dirección de arte","Campañas","Diseño editorial","Ilustración","IA aplicada al diseño"]}
 </script>
 <style>
 /* Layout: estudio a oscuras como su logo. Marco monocromo, el color lo pone el trabajo de cada caso. Retícula de 12 columnas, filetes de 1px, el monograma como ventana. */
@@ -223,7 +223,7 @@ p{margin:0}
 .anno{position:relative}
 .anno .pin-n{position:absolute;width:30px;height:30px;margin:-15px 0 0 -15px;border-radius:50%;background:var(--c);color:var(--bg);display:grid;place-items:center;font-family:var(--mono);font-size:12px;font-weight:500;box-shadow:0 0 0 6px color-mix(in srgb,var(--c) 30%,transparent)}
 .legend{margin:0;padding:0;list-style:none;counter-reset:l;border-top:1px solid var(--line)}
-.legend li{display:grid;grid-template-columns:40px 1fr;gap:12px;padding-block:14px;border-bottom:1px solid var(--line);font-size:15.5px}
+.legend li{display:block;border-bottom:1px solid var(--line)}
 .legend li b{display:block;font-weight:600}
 .legend li span.m{font-family:var(--mono);font-size:12px;color:var(--c);padding-top:2px}
 .legend li p{color:var(--mute);font-size:14.5px;margin-top:2px}
@@ -327,17 +327,31 @@ p{margin:0}
 @media (max-width:520px){.step{grid-column:1/-1}}
 
 /* Profile */
-.prof .txt{grid-column:span 7}
+.prof .txt{grid-column:6/span 7;grid-row:1}
+.prof dl{grid-row:2}
+.prof:not(:has(.portrait)) .txt{grid-column:1/span 7}
+.prof:not(:has(.portrait)) dl{grid-column:9/span 4;grid-row:1}
+.portrait{grid-column:1/span 4;grid-row:1/span 2;align-self:start;display:flex;flex-direction:column;gap:16px}
+.pt{position:relative;aspect-ratio:1;max-width:100%}
+.pt img{position:absolute;inset:7.5%;width:85%;height:85%;object-fit:cover;border-radius:50%;filter:grayscale(1) contrast(1.06);transition:filter 1s var(--ease),transform 1.2s var(--ease)}
+.pt svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.pt .pr{fill:none;stroke:var(--fg);stroke-width:1.4;stroke-dasharray:140}
+.js .portrait .pr{stroke-dashoffset:140;transition:stroke-dashoffset 1.8s .2s var(--ease)}
+.js .portrait.in .pr{stroke-dashoffset:0}
+@media (hover:hover){.portrait:hover img{filter:none;transform:scale(1.02)}}
+@media (hover:none){.pt img{filter:none}}
+.portrait figcaption{display:flex;justify-content:space-between;gap:12px;border-top:1px solid var(--line);padding-top:12px}
+@media (prefers-reduced-motion:reduce){.js .portrait .pr{stroke-dashoffset:0;transition:none}}
 .prof .big{font-size:clamp(24px,2.7vw,40px);line-height:1.2;letter-spacing:-.022em;font-weight:500}
 .prof .sm{margin-top:24px;color:var(--mute);max-width:58ch}
-.prof dl{grid-column:9/span 4;margin:0;border-top:1.5px solid var(--fg)}
+.prof dl{grid-column:6/span 7;margin:40px 0 0;border-top:1.5px solid var(--fg)}
 .prof dl div{display:grid;grid-template-columns:110px 1fr;gap:12px;padding-block:14px;border-bottom:1px solid var(--line)}
 .prof dt{color:var(--mute)}
 .prof dd{margin:0;font-size:15px}
 .figs{margin-top:clamp(56px,7vw,96px)}
 .figs div{grid-column:span 3;border-top:1px solid var(--line-2);padding-top:14px}
 .figs b{display:block;font-size:clamp(48px,5.6vw,88px);font-weight:500;letter-spacing:-.045em;line-height:1;font-variant-numeric:tabular-nums;margin-bottom:10px}
-@media (max-width:900px){.prof .txt,.prof dl{grid-column:1/-1}.figs div{grid-column:span 6}}
+@media (max-width:900px){.prof .txt,.prof dl,.prof:not(:has(.portrait)) .txt,.prof:not(:has(.portrait)) dl{grid-column:1/-1;grid-row:auto}.portrait{grid-column:1/-1;grid-row:auto;max-width:340px;margin-bottom:12px}.figs div{grid-column:span 6}}
 
 /* Contact */
 .contact{padding-block:clamp(110px,14vw,200px) clamp(36px,5vw,60px);position:relative;overflow:hidden}
@@ -346,6 +360,90 @@ p{margin:0}
 .mail{display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px;margin-top:clamp(36px,4vw,60px);padding-block:24px;border-block:1px solid var(--line)}
 .addr{font-size:clamp(24px,3.4vw,54px);letter-spacing:-.028em;font-weight:500;user-select:all;overflow-wrap:anywhere;min-width:0;flex:1 1 auto}
 .foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 32px;padding-top:22px}
+
+/* Interactive annotations */
+.anno .pin-n{border:0;cursor:pointer;padding:0;z-index:2;transition:transform .3s var(--ease),background .25s,color .25s;animation:pulse 2.4s ease-in-out infinite}
+.anno.touched .pin-n{animation:none}
+.anno .pin-n:hover,.anno .pin-n.on{transform:scale(1.18);background:var(--fg);color:var(--bg)}
+.anno .pin-n:focus-visible{outline:2px solid var(--fg);outline-offset:3px}
+@keyframes pulse{50%{box-shadow:0 0 0 12px color-mix(in srgb,var(--c) 0%,transparent)}}
+.anno-pop{position:absolute;z-index:3;width:min(300px,70%);background:var(--bg);color:var(--fg);border:1px solid var(--line-2);padding:16px 18px;box-shadow:0 20px 50px rgba(0,0,0,.45);display:flex;flex-direction:column;gap:6px;animation:popIn .3s var(--ease)}
+.anno-pop .mono{color:var(--c)}
+.anno-pop b{font-size:18px;font-weight:600;letter-spacing:-.01em;line-height:1.2}
+.anno-pop p{color:var(--mute);font-size:14.5px;line-height:1.45}
+@keyframes popIn{from{opacity:0;transform:translateY(6px)}}
+.anno-hint{margin-top:12px}
+.legend button{all:unset;box-sizing:border-box;display:grid;grid-template-columns:40px 1fr;gap:12px;width:100%;padding-block:14px;cursor:pointer;font-size:15.5px}
+.legend button b{display:block;font-weight:600;transition:color .2s}
+.legend button .p{display:block;color:var(--mute);font-size:14.5px;margin-top:2px}
+.legend button:hover b,.legend li.on b{color:var(--c)}
+.legend button:focus-visible{outline:1.5px solid var(--fg);outline-offset:2px}
+@media (max-width:900px){.legend{display:none}}
+@media (max-width:700px){.anno .pin-n{width:26px;height:26px;margin:-13px 0 0 -13px;font-size:11px;box-shadow:0 0 0 4px color-mix(in srgb,var(--c) 30%,transparent)}.anno-pop{position:static;width:auto;margin-top:12px;box-shadow:none}}
+@media (prefers-reduced-motion:reduce){.anno .pin-n{animation:none}}
+
+/* Mobile menu */
+.menu-btn{display:none}
+.menu{background:var(--bg)}
+.menu[open]{display:flex;flex-direction:column;animation:menuIn .5s var(--ease-io) both}
+@keyframes menuIn{from{clip-path:circle(0 at calc(100% - 40px) 30px)}to{clip-path:circle(150% at calc(100% - 40px) 30px)}}
+.menu-top{display:flex;justify-content:space-between;align-items:center;padding-block:calc(env(safe-area-inset-top,0px) + 13px) 13px;border-bottom:1px solid var(--line);width:100%}
+.menu-nav{display:flex;flex-direction:column;flex:1;justify-content:center;width:100%;padding-block:24px}
+.menu-nav a{display:flex;align-items:baseline;gap:16px;text-decoration:none;font-size:clamp(40px,11vw,64px);font-weight:600;letter-spacing:-.04em;line-height:1.08;padding-block:6px;border-bottom:1px solid var(--line)}
+.menu-foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 20px;padding-block:18px calc(env(safe-area-inset-bottom,0px) + 22px);width:100%}
+@media (max-width:980px){.menu-btn{display:inline-flex}}
+@media (max-width:600px){.top-r .cta{display:none}.id .now{display:none}}
+
+/* Lightbox */
+.lb{background:#0B0B0B}
+.lb[open]{display:grid;grid-template-rows:auto minmax(0,1fr) auto;animation:lbIn .35s ease both}
+@keyframes lbIn{from{opacity:0}}
+.lb-bar{display:flex;gap:16px;align-items:center;padding:calc(env(safe-area-inset-top,0px) + 12px) max(16px,env(safe-area-inset-right,0px)) 12px max(16px,env(safe-area-inset-left,0px))}
+.lb-cap{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lb-stage{height:100%;min-height:0;display:grid;place-items:center;overflow:hidden;padding:0 76px;touch-action:pan-y}
+.lb-stage.can{cursor:zoom-in}
+.lb-stage img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;user-select:none;-webkit-user-drag:none}
+.lb-stage.zoom{overflow:auto;place-items:start;padding:0;cursor:zoom-out;touch-action:auto}
+.lb-stage.zoom img{max-width:none;max-height:none}
+.lb-nav{position:fixed;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.45);border-color:var(--line-2)}
+.lb-prev{left:max(16px,env(safe-area-inset-left,0px))}
+.lb-next{right:max(16px,env(safe-area-inset-right,0px))}
+.lb-hint{text-align:center;padding:10px 16px calc(env(safe-area-inset-bottom,0px) + 14px)}
+@media (max-width:700px){.lb-stage{padding:0}.lb-nav{top:auto;bottom:calc(env(safe-area-inset-bottom,0px) + 6px);transform:none}}
+figure.zoomable{cursor:zoom-in}
+figure.zoomable:focus-visible{outline:1.5px solid var(--fg);outline-offset:4px}
+
+/* Contact lede */
+.c-lede{margin-top:clamp(20px,2.4vw,32px);font-size:clamp(18px,1.6vw,22px);color:var(--mute);max-width:46ch}
+
+/* Mobile refinements */
+@media (max-width:700px){
+  .scene{height:190vh;height:190svh}
+  .hero-ui{justify-content:center;padding-top:72px}
+  .hmeta{flex-direction:column;gap:2px}
+  .lock{font-size:15vw}
+  .hfoot{margin-top:22px;gap:12px}
+  .hfoot .pos{font-size:30px}
+  .c-title h2{font-size:clamp(42px,12.5vw,64px)}
+  .c-meta div{padding-top:12px}
+  .quote blockquote{font-size:clamp(30px,8.6vw,44px)}
+  .head h2{font-size:clamp(36px,10.4vw,56px)}
+  .band-c .head h2{font-size:clamp(30px,8.8vw,44px)}
+  .c-txt .body{font-size:18px}
+  .strip-head h3{font-size:22px}
+  .track img{height:340px}
+  .track.wide img{height:200px}
+  .chips{grid-template-columns:repeat(var(--n,4),minmax(0,1fr))}
+  .chip{aspect-ratio:1/1.3;padding:6px}
+  .chip span{font-size:8.5px;writing-mode:vertical-rl;transform:rotate(180deg)}
+  .rules div{grid-template-columns:1fr;gap:4px}
+  .deliv li{font-size:14px;padding:6px 12px}
+  .row{padding-block:22px;row-gap:12px}
+  .contact h2{font-size:18vw}
+  .figs b{font-size:46px}
+  .wcap b{font-size:24px}
+  .wcap .mono{display:none}
+}
 
 /* Custom cursor: the logo ring */
 .cur{position:fixed;left:0;top:0;z-index:40;pointer-events:none;width:14px;height:14px;margin:-7px 0 0 -7px;border:1.5px solid var(--fg);border-radius:50%;display:grid;place-items:center;transition:width .35s var(--ease),height .35s var(--ease),margin .35s var(--ease),background .35s,border-color .35s,opacity .3s;opacity:0;mix-blend-mode:normal}
@@ -402,11 +500,11 @@ dialog[open]{animation:open .8s var(--ease-io) both}
     <nav class="nav" aria-label="Principal">
       <a href="#casos">Casos</a>
       <a href="#archivo">Archivo</a>
-      <a href="#alegra">Para Alegra</a>
+      <a href="#capacidades">Capacidades</a>
       <a href="#oficio">Oficio</a>
       <a href="#perfil">Perfil</a>
     </nav>
-    <div class="top-r"><span class="mono mute clock" id="clock">Barranquilla, CO</span><a class="btn" href="#contacto">Contacto</a></div>
+    <div class="top-r"><span class="mono mute clock" id="clock">Barranquilla, CO</span><a class="btn cta" href="#contacto">Contacto</a><button class="btn line menu-btn" type="button" id="menu-btn" aria-haspopup="dialog" aria-controls="menu">Menú</button></div>
   </div>
   <span class="prog" id="prog" aria-hidden="true"></span>
 </header>
@@ -618,20 +716,24 @@ dialog[open]{animation:open .8s var(--ease-io) both}
       <div class="wrap">
         <div class="g12 head"><div class="k"><span class="rn" aria-hidden="true"><svg viewBox="0 0 104 104"><path d="M61.99 10.69A42.5 42.5 0 0 1 54 94.45M50 94.45A42.5 42.5 0 0 1 43.02 10.46" fill="none" stroke="currentColor" stroke-width="5"/></svg><b>S</b></span><span class="mono" style="color:var(--c)">Sistema</span></div><h2>Anatomía de una página.</h2><p class="mute">Todos los capítulos comparten la misma estructura de página.</p></div>
         <div class="g12" style="align-items:start">
-          <div class="anno ri" style="grid-column:1/span 8" data-cur="Ampliar">
-            <img src="assets/img/informe-uniatlantico-01-1200.jpg" srcset="assets/img/informe-uniatlantico-01-1200.jpg 1200w, assets/img/informe-uniatlantico-01-2000.jpg 2000w" sizes="(min-width:900px) 62vw, 100vw" width="1200" height="675" alt="Página del capítulo 18, Integralidad curricular, con sus módulos señalados" loading="lazy" decoding="async">
-            <span class="pin-n" style="left:2.6%;top:11%">1</span>
-            <span class="pin-n" style="left:61%;top:7%">2</span>
-            <span class="pin-n" style="left:38%;top:19%">3</span>
-            <span class="pin-n" style="left:3%;top:84%">4</span>
-            <span class="pin-n" style="left:47.5%;top:84%">5</span>
+          <div style="grid-column:1/span 8">
+            <div class="anno ri" id="anno" data-cur="Ampliar">
+              <img src="assets/img/informe-uniatlantico-01-1200.jpg" srcset="assets/img/informe-uniatlantico-01-1200.jpg 1200w, assets/img/informe-uniatlantico-01-2000.jpg 2000w" sizes="(min-width:900px) 62vw, 100vw" width="1200" height="675" alt="Página del capítulo 18, Integralidad curricular, con sus módulos señalados" loading="lazy" decoding="async">
+              <button type="button" class="pin-n" data-i="0" style="left:2.6%;top:11%" aria-label="Parte 1: código y título del capítulo" aria-expanded="false">1</button>
+              <button type="button" class="pin-n" data-i="1" style="left:61%;top:7%" aria-label="Parte 2: grado de cumplimiento" aria-expanded="false">2</button>
+              <button type="button" class="pin-n" data-i="2" style="left:38%;top:19%" aria-label="Parte 3: diagramas" aria-expanded="false">3</button>
+              <button type="button" class="pin-n" data-i="3" style="left:3%;top:84%" aria-label="Parte 4: fortalezas" aria-expanded="false">4</button>
+              <button type="button" class="pin-n" data-i="4" style="left:47.5%;top:84%" aria-label="Parte 5: aspectos de mejora" aria-expanded="false">5</button>
+              <div class="anno-pop" id="anno-pop" role="status" aria-live="polite" hidden></div>
+            </div>
+            <p class="mono mute anno-hint">Toca un número para ver qué hace cada parte de la página</p>
           </div>
-          <ol class="legend" style="grid-column:10/span 3">
-            <li><span class="m">01</span><div><b>Código y título del capítulo</b><p>Barra de color que ubica al lector.</p></div></li>
-            <li><span class="m">02</span><div><b>Grado de cumplimiento</b><p>Dos mediciones, 2020 y 2025, lado a lado.</p></div></li>
-            <li><span class="m">03</span><div><b>Diagramas</b><p>Los procesos se explican con esquemas e íconos.</p></div></li>
-            <li><span class="m">04</span><div><b>Fortalezas</b><p>Módulo fijo al pie de cada capítulo.</p></div></li>
-            <li><span class="m">05</span><div><b>Aspectos de mejora</b><p>Siempre junto a las fortalezas, en azul.</p></div></li>
+          <ol class="legend" id="legend" style="grid-column:10/span 3">
+            <li><button type="button" data-i="0"><span class="m">01</span><span><b>Código y título del capítulo</b><span class="p">Barra de color que ubica al lector.</span></span></button></li>
+            <li><button type="button" data-i="1"><span class="m">02</span><span><b>Grado de cumplimiento</b><span class="p">Dos mediciones, 2020 y 2025, lado a lado.</span></span></button></li>
+            <li><button type="button" data-i="2"><span class="m">03</span><span><b>Diagramas</b><span class="p">Los procesos se explican con esquemas e íconos.</span></span></button></li>
+            <li><button type="button" data-i="3"><span class="m">04</span><span><b>Fortalezas</b><span class="p">Módulo fijo al pie de cada capítulo.</span></span></button></li>
+            <li><button type="button" data-i="4"><span class="m">05</span><span><b>Aspectos de mejora</b><span class="p">Siempre junto a las fortalezas, en azul.</span></span></button></li>
           </ol>
         </div>
       </div>
@@ -751,17 +853,18 @@ dialog[open]{animation:open .8s var(--ease-io) both}
     </div>
   </section>
 
-  <!-- PARA ALEGRA -->
-  <div class="light" id="alegra">
+  <!-- CAPACIDADES -->
+  <div class="light" id="capacidades">
     <section class="sec">
       <div class="wrap">
-        <div class="g12 head"><div class="k"><span class="rn" aria-hidden="true"><svg viewBox="0 0 104 104"><path d="M61.99 10.69A42.5 42.5 0 0 1 54 94.45M50 94.45A42.5 42.5 0 0 1 43.02 10.46" fill="none" stroke="currentColor" stroke-width="5"/></svg><b>A</b></span><span class="mono mute">Para Alegra</span></div><h2>Lo que Alegra necesita, ya lo he hecho.</h2><p>Alegra le habla a pymes y contadores en cuatro países, con la IA en el centro y un marketing que produce rápido. Cada punto lleva a un proyecto que lo prueba.</p></div>
+        <div class="g12 head"><div class="k"><span class="rn" aria-hidden="true"><svg viewBox="0 0 104 104"><path d="M61.99 10.69A42.5 42.5 0 0 1 54 94.45M50 94.45A42.5 42.5 0 0 1 43.02 10.46" fill="none" stroke="currentColor" stroke-width="5"/></svg><b>C</b></span><span class="mono mute">Capacidades</span></div><h2>Cada capacidad, con su prueba.</h2><p>Para marcas, instituciones, agencias y equipos de marketing que necesitan identidad, campañas o piezas editoriales con un sistema detrás. Cada punto lleva al proyecto que lo demuestra.</p></div>
         <div class="rows">
-          <div class="g12 row"><span class="mono mute n">01</span><h3>Campañas en cuatro países con una sola línea gráfica</h3><p>Concepto, sistema y despliegue en redes, afiches, credenciales y merch. Una identidad que se adapta a cada canal sin perder consistencia.</p><a class="proof" href="#caso-carnaval"><img src="assets/img/carnaval-2026-06-1200.jpg" width="1080" height="1350" alt="Carnaval de Polonuevo 2026" loading="lazy" decoding="async"><span><em>Prueba</em><b>Carnaval de Polonuevo 2026</b></span></a></div>
-          <div class="g12 row"><span class="mono mute n">02</span><h3>Sistemas que el equipo puede usar sin diseño en cada pedido</h3><p>Un módulo gráfico que genera patrones, piezas y hasta el arco de entrada de un evento. Plantillas reutilizables en Figma y Canva.</p><a class="proof" href="#caso-feria"><img src="assets/img/feria-agroindustrial-11-1200.jpg" width="1200" height="886" alt="Arco de la Feria Agroindustrial" loading="lazy" decoding="async"><span><em>Prueba</em><b>Feria Agroindustrial</b></span></a></div>
-          <div class="g12 row"><span class="mono mute n">03</span><h3>Un equipo que trabaja con IA en el centro</h3><p>IA desde la exploración de referentes hasta la producción de gráficos, con la dirección visual y la revisión final a cargo del diseñador.</p><a class="proof" href="#caso-informe"><img src="assets/img/informe-uniatlantico-01-1200.jpg" srcset="assets/img/informe-uniatlantico-01-1200.jpg 1200w, assets/img/informe-uniatlantico-01-2000.jpg 2000w" sizes="76px" width="1200" height="675" alt="Informe de reacreditación" loading="lazy" decoding="async"><span><em>Prueba</em><b>Informe de reacreditación</b></span></a></div>
-          <div class="g12 row"><span class="mono mute n">04</span><h3>Contenido claro para contadores y pymes</h3><p>Una retícula que vuelve legible un informe técnico. El mismo oficio que piden guías, reportes y materiales de onboarding.</p><a class="proof" href="#caso-informe"><img src="assets/img/informe-uniatlantico-05-1200.jpg" width="1200" height="675" alt="Página del informe" loading="lazy" decoding="async"><span><em>Prueba</em><b>Universidad del Atlántico</b></span></a></div>
-          <div class="g12 row"><span class="mono mute n">05</span><h3>Hablarle a la gente con cercanía</h3><p>Campañas para comunidades reales, con personajes, color y un tono que la gente reconoce como propio, sin perder orden ni sistema.</p><button class="proof" type="button" data-open="mes-ninez"><img src="assets/img/mes-ninez-04-1200.jpg" width="1200" height="1500" alt="Mes de la Niñez" loading="lazy" decoding="async"><span><em>Prueba</em><b>Mes de la Niñez</b></span></button></div>
+          <div class="g12 row"><span class="mono mute n">01</span><h3>Campañas de principio a fin</h3><p>Concepto, sistema y despliegue en redes, afiches, credenciales y merch, con una línea gráfica que se mantiene en cada canal.</p><a class="proof" href="#caso-carnaval"><img src="assets/img/carnaval-2026-06-1200.jpg" width="1080" height="1350" alt="Carnaval de Polonuevo 2026" loading="lazy" decoding="async"><span><em>Prueba</em><b>Carnaval de Polonuevo 2026</b></span></a></div>
+          <div class="g12 row"><span class="mono mute n">02</span><h3>Sistemas que el equipo puede usar</h3><p>Módulos, patrones y plantillas reutilizables en Figma y Canva, para producir piezas nuevas sin empezar de cero.</p><a class="proof" href="#caso-feria"><img src="assets/img/feria-agroindustrial-11-1200.jpg" width="1200" height="886" alt="Arco de la Feria Agroindustrial" loading="lazy" decoding="async"><span><em>Prueba</em><b>Feria Agroindustrial</b></span></a></div>
+          <div class="g12 row"><span class="mono mute n">03</span><h3>Rediseño sin perder la memoria</h3><p>Actualizar una marca existente conservando lo que la gente ya reconoce de ella.</p><a class="proof" href="#caso-barca"><img src="assets/img/barca-del-arte-03-1200.jpg" width="876" height="1073" alt="La Barca del Arte" loading="lazy" decoding="async"><span><em>Prueba</em><b>La Barca del Arte</b></span></a></div>
+          <div class="g12 row"><span class="mono mute n">04</span><h3>Información compleja, fácil de leer</h3><p>Retículas editoriales y visualización de información para informes, guías y documentos técnicos.</p><a class="proof" href="#caso-informe"><img src="assets/img/informe-uniatlantico-05-1200.jpg" width="1200" height="675" alt="Página del informe" loading="lazy" decoding="async"><span><em>Prueba</em><b>Informe de reacreditación</b></span></a></div>
+          <div class="g12 row"><span class="mono mute n">05</span><h3>Producción ágil con IA</h3><p>IA en la exploración, la generación de recursos y los gráficos, con la dirección visual y la revisión final a cargo del diseñador.</p><a class="proof" href="#oficio"><img src="assets/img/informe-uniatlantico-01-1200.jpg" srcset="assets/img/informe-uniatlantico-01-1200.jpg 1200w, assets/img/informe-uniatlantico-01-2000.jpg 2000w" sizes="76px" width="1200" height="675" alt="Informe con gráficos asistidos por IA" loading="lazy" decoding="async"><span><em>Prueba</em><b>IA en el proceso</b></span></a></div>
+          <div class="g12 row"><span class="mono mute n">06</span><h3>Comunicación cercana</h3><p>Personajes, color y un tono que la gente reconoce como propio, sin perder el orden del sistema.</p><button class="proof" type="button" data-open="mes-ninez"><img src="assets/img/mes-ninez-04-1200.jpg" width="1200" height="1500" alt="Mes de la Niñez" loading="lazy" decoding="async"><span><em>Prueba</em><b>Mes de la Niñez</b></span></button></div>
         </div>
       </div>
     </section>
@@ -798,6 +901,13 @@ dialog[open]{animation:open .8s var(--ease-io) both}
   <section class="sec" id="perfil">
     <div class="wrap">
       <div class="g12 prof">
+        <figure class="portrait ri" id="portrait">
+          <div class="pt">
+            <img src="assets/img/leyder-retrato-900.jpg" width="900" height="900" alt="Retrato de Leyder Hernández" loading="lazy" decoding="async" onerror="this.closest('.portrait').remove()">
+            <svg viewBox="0 0 104 104" aria-hidden="true"><path class="pr" d="M61.99 10.69A42.5 42.5 0 0 1 54 94.45M50 94.45A42.5 42.5 0 0 1 43.02 10.46" pathLength="140"/></svg>
+          </div>
+          <figcaption><span class="mono">Leyder Hernández Cervantes</span><span class="mono mute">Barranquilla, 2026</span></figcaption>
+        </figure>
         <div class="txt">
           <span class="mono mute">Perfil</span>
           <p class="big rv" style="margin-top:18px">Diseñador gráfico desde 2018. Convierto briefs en conceptos y sistemas visuales que se adaptan a distintos formatos, canales y audiencias.</p>
@@ -825,6 +935,7 @@ dialog[open]{animation:open .8s var(--ease-io) both}
     <div class="wrap">
       <span class="mono mute">Contacto</span>
       <h2 style="margin-top:20px"><svg aria-hidden="true"><use href="#mk"/></svg>Hablemos.</h2>
+      <p class="c-lede">Identidad, campañas y diseño editorial para marcas, instituciones y equipos. Por proyecto o como parte de tu equipo.</p>
       <div class="mail">
         <span class="addr" id="addr">leyderh3@gmail.com</span>
         <button class="btn" type="button" data-copy>Copiar correo</button>
@@ -833,7 +944,7 @@ dialog[open]{animation:open .8s var(--ease-io) both}
       </div>
       <div class="foot mono mute">
         <span>Leyder Hernández Cervantes</span>
-        <span>+57 302 315 8677</span>
+        <span>+57 3023158677</span>
         <span>Barranquilla, Colombia</span>
         <a href="#inicio">Volver arriba ↑</a>
       </div>
@@ -842,6 +953,27 @@ dialog[open]{animation:open .8s var(--ease-io) both}
 </main>
 
 <div class="cur" id="cur" aria-hidden="true"><span></span></div>
+
+<dialog id="menu" class="menu" aria-label="Menú">
+  <div class="menu-top wrap"><span class="id"><svg aria-hidden="true"><use href="#mk"/></svg><b>Leyder Hernández</b></span><button class="icon" type="button" id="menu-close" aria-label="Cerrar menú">✕</button></div>
+  <nav class="menu-nav wrap" aria-label="Secciones">
+    <a href="#casos"><span class="mono mute">01</span>Casos</a>
+    <a href="#capacidades"><span class="mono mute">02</span>Capacidades</a>
+    <a href="#archivo"><span class="mono mute">03</span>Archivo</a>
+    <a href="#oficio"><span class="mono mute">04</span>Oficio</a>
+    <a href="#perfil"><span class="mono mute">05</span>Perfil</a>
+    <a href="#contacto"><span class="mono mute">06</span>Contacto</a>
+  </nav>
+  <div class="menu-foot wrap mono mute"><span>leyderh3@gmail.com</span><span>Barranquilla, Colombia</span></div>
+</dialog>
+
+<dialog id="lb" class="lb" aria-label="Visor de imágenes">
+  <div class="lb-bar"><span class="mono" id="lb-n"></span><span class="mono mute lb-cap" id="lb-cap"></span><button class="icon" type="button" id="lb-close" aria-label="Cerrar visor">✕</button></div>
+  <div class="lb-stage" id="lb-stage"><img id="lb-img" alt=""></div>
+  <button class="icon lb-nav lb-prev" type="button" id="lb-prev" aria-label="Imagen anterior">←</button>
+  <button class="icon lb-nav lb-next" type="button" id="lb-next" aria-label="Imagen siguiente">→</button>
+  <p class="lb-hint mono mute" id="lb-hint">Toca la imagen para acercar</p>
+</dialog>
 
 <dialog id="dlg" aria-labelledby="dlg-title">
   <div class="dlg" id="dlg-scroll">
@@ -1005,7 +1137,7 @@ dlg.addEventListener("click",e=>{if(e.target===dlg)dlg.close();});
 
 /* Cursor: the logo ring */
 if(fine&&!reduce){const cur=$("#cur"),lab=cur.querySelector("span");let cx=0,cy=0,mx=-99,my=-99;
-  addEventListener("mousemove",e=>{mx=e.clientX;my=e.clientY;cur.classList.add("on");const t=e.target.closest&&e.target.closest("[data-cur]");if(t&&!dlg.open){cur.classList.add("big");lab.textContent=t.dataset.cur;}else cur.classList.remove("big");},{passive:true});
+  addEventListener("mousemove",e=>{mx=e.clientX;my=e.clientY;cur.classList.add("on");const t=e.target.closest&&e.target.closest("[data-cur]");if(t&&!dlg.open&&!lb.open){cur.classList.add("big");lab.textContent=t.dataset.cur;}else cur.classList.remove("big");},{passive:true});
   document.addEventListener("mouseleave",()=>cur.classList.remove("on"));
   (function f(){cx+=(mx-cx)*.22;cy+=(my-cy)*.22;cur.style.transform=`translate3d(${cx.toFixed(1)}px,${cy.toFixed(1)}px,0)`;requestAnimationFrame(f);})();}
 
@@ -1014,6 +1146,56 @@ $$("[data-copy]").forEach(b=>b.addEventListener("click",()=>{const t="leyderh3@g
   const done=m=>{toast.textContent=m;setTimeout(()=>toast.textContent="",2600);};
   const sel=()=>{const r=document.createRange();r.selectNodeContents($("#addr"));const s=getSelection();s.removeAllRanges();s.addRange(r);done("Selecciónalo y cópialo");};
   if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(t).then(()=>done("Correo copiado"),sel);else sel();}));
+
+/* Lightbox: real zoom for every "Ampliar" image */
+const lb=$("#lb"),lbImg=$("#lb-img"),lbStage=$("#lb-stage");let lbList=[],lbI=0;
+const ZSEL='.case figure:not([data-open]) img, .case .anno > img';
+$$(".case figure:not([data-open])").forEach(f=>{if(f.querySelector(".ba"))return;f.classList.add("zoomable");f.tabIndex=0;f.setAttribute("role","button");const c=f.querySelector("figcaption");f.setAttribute("aria-label","Ampliar imagen"+(c?": "+c.textContent.trim():""));});
+const bigSrc=img=>{const s=img.getAttribute("src")||"";const m=s.match(/assets\/img\/(.+)-1200\.jpg$/);return (m&&MAN[m[1]]&&MAN[m[1]].big)?`assets/img/${m[1]}-2000.jpg`:s;};
+const capOf=img=>{const f=img.closest("figure");const c=f&&f.querySelector("figcaption .mono, figcaption.mono");return (c&&c.textContent.trim())||img.alt;};
+function lbShow(i){lbI=(i+lbList.length)%lbList.length;const im=lbList[lbI];lbStage.classList.remove("zoom","can");lbImg.removeAttribute("src");lbImg.src=bigSrc(im);lbImg.alt=im.alt;
+  $("#lb-n").textContent=`${lbI+1} / ${lbList.length}`;$("#lb-cap").textContent=capOf(im);$("#lb-prev").hidden=$("#lb-next").hidden=lbList.length<2;}
+lbImg.addEventListener("load",()=>{const can=lbImg.naturalWidth>lbImg.clientWidth*1.2;lbStage.classList.toggle("can",can);$("#lb-hint").textContent=can?"Toca la imagen para acercar":(lbList.length>1?"Desliza o usa las flechas":"");});
+function lbOpen(img){const scope=img.closest(".case")||document;lbList=[...scope.querySelectorAll(ZSEL)];const i=lbList.indexOf(img);if(i<0)return;lbShow(i);if(!lb.open){lb.showModal();document.body.style.overflow="hidden";}}
+lb.addEventListener("close",()=>{document.body.style.overflow="";lbStage.classList.remove("zoom");});
+document.addEventListener("click",e=>{if(e.target.closest(".pin-n,.ba,[data-open],a,button"))return;const f=e.target.closest(".case figure.zoomable, .case .anno");if(!f)return;const img=f.matches(".anno")?f.querySelector(":scope > img"):f.querySelector("img");if(img)lbOpen(img);});
+document.addEventListener("keydown",e=>{if((e.key==="Enter"||e.key===" ")&&e.target.matches&&e.target.matches("figure.zoomable")){e.preventDefault();lbOpen(e.target.querySelector("img"));}
+  if(!lb.open)return;if(e.key==="ArrowRight")lbShow(lbI+1);if(e.key==="ArrowLeft")lbShow(lbI-1);});
+$("#lb-close").onclick=()=>lb.close();$("#lb-prev").onclick=()=>lbShow(lbI-1);$("#lb-next").onclick=()=>lbShow(lbI+1);
+let sx0=0,sy0=0,swiped=false;
+lbStage.addEventListener("pointerdown",e=>{sx0=e.clientX;sy0=e.clientY;swiped=false;});
+lbStage.addEventListener("pointerup",e=>{if(lbStage.classList.contains("zoom"))return;const dx=e.clientX-sx0,dy=e.clientY-sy0;if(e.pointerType!=="mouse"&&Math.abs(dx)>50&&Math.abs(dx)>Math.abs(dy)){swiped=true;lbShow(lbI+(dx<0?1:-1));}});
+lbStage.addEventListener("click",e=>{if(swiped)return;if(lbStage.classList.contains("zoom")){lbStage.classList.remove("zoom");return;}
+  if(e.target!==lbImg){lb.close();return;}if(!lbStage.classList.contains("can"))return;
+  const r=lbImg.getBoundingClientRect(),fx=(e.clientX-r.left)/r.width,fy=(e.clientY-r.top)/r.height;lbStage.classList.add("zoom");
+  requestAnimationFrame(()=>{lbStage.scrollLeft=fx*lbImg.offsetWidth-lbStage.clientWidth/2;lbStage.scrollTop=fy*lbImg.offsetHeight-lbStage.clientHeight/2;});});
+
+/* Annotated page */
+const ANNO=[
+ {t:"Código y título del capítulo",d:"Barra naranja con el código del capítulo, aquí C 18, y su nombre. Se repite en todas las páginas y ubica al lector dentro del informe."},
+ {t:"Grado de cumplimiento",d:"Las dos mediciones lado a lado: 2020 con 94 % y 2025 con 96 %, ambas en «cumple plenamente». El avance se lee de un vistazo."},
+ {t:"Diagramas",d:"Cada tema se explica con un esquema propio: integración interdisciplinaria, relación entre teoría y práctica, organización curricular y evaluación del aprendizaje."},
+ {t:"Fortalezas",d:"Módulo fijo al pie de la página que resume en lista lo que el programa hace bien en ese capítulo."},
+ {t:"Aspectos de mejora",d:"Bloque azul junto a las fortalezas, con las acciones por línea: fortalecimiento curricular, opciones de grado y formación socioemocional."}];
+const annoEl=$("#anno"),pop=$("#anno-pop");
+if(annoEl){const pins=$$("#anno .pin-n"),lis=$$("#legend li");let cur=-1;
+  function annoSet(i){cur=i;annoEl.classList.add("touched");
+    pins.forEach((p,k)=>{p.classList.toggle("on",k===i);p.setAttribute("aria-expanded",String(k===i));});lis.forEach((l,k)=>l.classList.toggle("on",k===i));
+    if(i<0){pop.hidden=true;return;}const p=pins[i],x=parseFloat(p.style.left),y=parseFloat(p.style.top);
+    pop.innerHTML=`<span class="mono">${String(i+1).padStart(2,"0")} / 05</span><b>${ANNO[i].t}</b><p>${ANNO[i].d}</p>`;pop.hidden=false;
+    pop.style.left=x<55?`calc(${x}% + 26px)`:"auto";pop.style.right=x<55?"auto":`calc(${100-x}% + 26px)`;
+    pop.style.top=y<50?`calc(${y}% - 18px)`:"auto";pop.style.bottom=y<50?"auto":`calc(${100-y}% - 18px)`;}
+  const mqA=matchMedia("(max-width:700px)");const placePop=()=>{if(mqA.matches)annoEl.after(pop);else annoEl.appendChild(pop);};placePop();mqA.addEventListener("change",placePop);
+  pins.forEach((p,k)=>{p.addEventListener("click",e=>{e.stopPropagation();annoSet(cur===k?-1:k);});if(fine)p.addEventListener("mouseenter",()=>annoSet(k));});
+  $$("#legend button").forEach(b=>b.addEventListener("click",()=>annoSet(+b.dataset.i)));
+  document.addEventListener("click",e=>{if(cur>=0&&!e.target.closest("#anno,#legend,#anno-pop"))annoSet(-1);});}
+
+/* Mobile menu */
+const menu=$("#menu");
+$("#menu-btn").addEventListener("click",()=>{menu.showModal();document.body.style.overflow="hidden";});
+$("#menu-close").addEventListener("click",()=>menu.close());
+menu.addEventListener("close",()=>{document.body.style.overflow="";});
+$$("#menu a").forEach(a=>a.addEventListener("click",e=>{e.preventDefault();const id=a.getAttribute("href");menu.close();setTimeout(()=>{const el=document.querySelector(id);if(el)el.scrollIntoView({behavior:reduce?"auto":"smooth"});},60);}));
 
 /* Local time */
 (function tick(){try{const f=new Intl.DateTimeFormat("es-CO",{timeZone:"America/Bogota",hour:"numeric",minute:"2-digit"});$("#clock").textContent="Barranquilla · "+f.format(new Date());}catch(e){}setTimeout(tick,30000);})();
