@@ -19,7 +19,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <link rel="preload" as="image" href="assets/img/carnaval-2026-00-2000.jpg" media="(min-width:701px)">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","name":"Leyder Hernández Cervantes","jobTitle":"Diseñador gráfico","email":"mailto:leyderh3@gmail.com","telephone":"+57 3023158677","address":{"@type":"PostalAddress","addressLocality":"Barranquilla","addressCountry":"CO"},"knowsAbout":["Identidad visual","Dirección de arte","Campañas","Diseño editorial","Ilustración","IA aplicada al diseño"]}
+{"@context":"https://schema.org","@type":"Person","name":"Leyder Hernández Cervantes","jobTitle":"Diseñador gráfico","email":"mailto:leyderh3@gmail.com","telephone":"+57 3023158677","address":{"@type":"PostalAddress","addressLocality":"Barranquilla","addressCountry":"CO"},"knowsAbout":["Identidad visual","Dirección de arte","Campañas","Diseño editorial","Ilustración","Animación 2D","Producción audiovisual","IA aplicada al diseño"],"alumniOf":[{"@type":"CollegeOrUniversity","name":"Universidad Europea"},{"@type":"CollegeOrUniversity","name":"Institución Universitaria de Barranquilla"},{"@type":"CollegeOrUniversity","name":"ITSA"}],"worksFor":{"@type":"CollegeOrUniversity","name":"Institución Universitaria de Barranquilla"}}
 </script>
 <style>
 /* Layout: estudio a oscuras como su logo. Marco monocromo, el color lo pone el trabajo de cada caso. Retícula de 12 columnas, filetes de 1px, el monograma como ventana. */
@@ -241,6 +241,8 @@ p{margin:0}
 /* Deliverables */
 .deliv{margin-top:clamp(56px,7vw,104px);padding-top:22px;border-top:1px solid var(--line);align-items:start}
 .deliv .lbl{grid-column:1/span 3}
+.ai-note{grid-column:4/span 9;font-size:clamp(17px,1.4vw,20px);line-height:1.5}
+@media (max-width:900px){.ai-note{grid-column:1/-1}}
 .deliv ul{grid-column:4/span 9;margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px 8px}
 .deliv li{font-size:15px;padding:7px 14px;border:1px solid var(--line-2);border-radius:999px}
 @media (max-width:900px){.deliv .lbl,.deliv ul{grid-column:1/-1}}
@@ -348,6 +350,23 @@ p{margin:0}
 .prof dl div{display:grid;grid-template-columns:110px 1fr;gap:12px;padding-block:14px;border-bottom:1px solid var(--line)}
 .prof dt{color:var(--mute)}
 .prof dd{margin:0;font-size:15px}
+.cv{margin-top:clamp(64px,8vw,120px);align-items:start}
+.cv>.lbl{grid-column:1/span 3;position:sticky;top:96px}
+.cv>.list{grid-column:4/span 9;border-top:1.5px solid var(--fg)}
+.cv-row{display:grid;grid-template-columns:150px minmax(0,1fr) minmax(0,1.15fr);gap:var(--g);padding-block:18px;border-bottom:1px solid var(--line);align-items:baseline}
+.cv-row .yr{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+.cv-row.now .yr{color:var(--fg)}
+.cv-row.now .yr::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--fg);margin-right:8px;vertical-align:1px}
+.cv-row h4{font-size:19px;font-weight:600;letter-spacing:-.012em;line-height:1.25}
+.cv-row h4 span{display:block;font-weight:400;color:var(--mute);font-size:15px;margin-top:3px;letter-spacing:0}
+.cv-row p{color:var(--mute);font-size:15px;line-height:1.5}
+.cv-row p:empty{display:none}
+.tools-g .cv-row{grid-template-columns:150px 1fr}
+.tools-g .tools{margin-top:0}
+.comp-list{list-style:none;margin:30px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:0 var(--g);border-top:1px solid var(--line)}
+.comp-list li{padding:12px 0;border-bottom:1px solid var(--line);font-size:15px}
+@media (max-width:900px){.cv>.lbl{grid-column:1/-1;position:static;flex-direction:row;justify-content:space-between}.cv>.list{grid-column:1/-1}.cv-row{grid-template-columns:1fr;gap:6px}.tools-g .cv-row{grid-template-columns:1fr}}
+@media (max-width:560px){.comp-list{grid-template-columns:1fr}}
 .figs{margin-top:clamp(56px,7vw,96px)}
 .figs div{grid-column:span 3;border-top:1px solid var(--line-2);padding-top:14px}
 .figs b{display:block;font-size:clamp(48px,5.6vw,88px);font-weight:500;letter-spacing:-.045em;line-height:1;font-variant-numeric:tabular-nums;margin-bottom:10px}
@@ -521,7 +540,7 @@ dialog[open]{animation:open .8s var(--ease-io) both}
       </div>
       <div class="hero-ui" id="hero-ui">
         <div class="wrap">
-          <div class="hmeta mono mute"><span>Diseñador gráfico · IA aplicada</span><span class="hide-s">Identidad · Campañas · Editorial</span><span>Barranquilla, Colombia</span><span class="hide-s">Portafolio 2022–2026</span></div>
+          <div class="hmeta mono mute"><span>Diseñador gráfico · IA aplicada</span><span class="hide-s">Identidad · Campañas · Editorial · Animación</span><span>Barranquilla, Colombia</span><span class="hide-s">Portafolio 2022–2026</span></div>
           <h1 class="lock" aria-label="Leyder Hernández">
             <span class="l1" aria-hidden="true"><span class="ln"><span>Leyder</span></span></span>
             <span class="l2" aria-hidden="true">
@@ -757,11 +776,11 @@ dialog[open]{animation:open .8s var(--ease-io) both}
         <div style="grid-column:1/span 5" class="lbl">
           <span class="mono">IA en el proceso</span>
           <h3 style="font-size:clamp(28px,3vw,44px);line-height:1.02;letter-spacing:-.03em;margin-top:8px" class="rv">Quién hizo qué.</h3>
-          <p class="mute" style="margin-top:14px;max-width:40ch">La IA agilizó la elaboración de los gráficos. La estructura y el criterio fueron del diseñador.</p>
+          <p class="mute" style="margin-top:14px;max-width:40ch">La IA agilizó la producción de gráficos y tablas. La identidad, la estructura y el criterio fueron del diseñador.</p>
         </div>
         <div style="grid-column:7/span 6;border-top:1.5px solid var(--fg)">
           <div class="who"><span class="mono">Diseño</span><div><h4>Identidad y estructura</h4><p>Identidad visual del informe, organización de la información y retícula editorial.</p></div></div>
-          <div class="who ai"><span class="mono">IA</span><div><h4>Producción de gráficos</h4><p>Antigravity como apoyo para elaborar y optimizar los gráficos de resultados.</p><div class="tools"><span>Antigravity</span></div></div></div>
+          <div class="who ai"><span class="mono">IA</span><div><h4>Producción de gráficos y tablas</h4><p>Claude, Antigravity y conectores con Figma apoyaron la producción y actualización de gráficos y tablas, siguiendo la línea visual definida por el diseñador.</p><div class="tools"><span>Claude</span><span>Antigravity</span><span>Conectores con Figma</span></div></div></div>
           <div class="who"><span class="mono">Diseño</span><div><h4>Dirección y revisión final</h4><p>Cada gráfico pasó por revisión antes de entrar al documento.</p></div></div>
         </div>
       </div>
@@ -781,7 +800,7 @@ dialog[open]{animation:open .8s var(--ease-io) both}
         <h2 class="rv">Feria Agroindustrial</h2>
       </div>
       <dl class="g12 c-meta">
-        <div><dt class="mono">Cliente</dt><dd>Polonuevo, Atlántico</dd></div>
+        <div><dt class="mono">Cliente</dt><dd>Alcaldía de Polonuevo, Atlántico</dd></div>
         <div><dt class="mono">Año</dt><dd>2025</dd></div>
         <div><dt class="mono">Disciplinas</dt><dd>Dirección visual · Sistema modular · Campaña</dd></div>
         <div><dt class="mono">Formatos</dt><dd>Redes · Web · Impresos · Branding físico</dd></div>
@@ -835,6 +854,7 @@ dialog[open]{animation:open .8s var(--ease-io) both}
         <figure class="ri" style="grid-column:8/span 5;margin-top:14%" data-cur="Ampliar"><img src="assets/img/feria-agroindustrial-10-1200.jpg" width="1200" height="694" alt="Afiche de la feria" loading="lazy" decoding="async"><figcaption class="cap"><span class="mono mute">Afiche</span><span class="tag">Mockup</span></figcaption></figure>
       </div>
       <figure class="ri" style="margin-top:clamp(40px,5vw,72px)" data-cur="Ampliar"><img src="assets/img/feria-agroindustrial-04-1200.jpg" srcset="assets/img/feria-agroindustrial-04-1200.jpg 1200w, assets/img/feria-agroindustrial-04-2000.jpg 2000w" sizes="(min-width:1400px) 1300px, 100vw" width="1200" height="185" alt="Banner horizontal de la feria" loading="lazy" decoding="async"><figcaption class="cap"><span class="mono mute">Banner horizontal</span></figcaption></figure>
+      <div class="g12 deliv"><div class="lbl"><span class="mono" style="color:var(--c)">IA en el proceso</span></div><p class="ai-note">Claude para la exploración creativa y la búsqueda de referentes. Nano Banana y Adobe Firefly en la creación de recursos visuales. La dirección visual y la adaptación a cada formato, propias.</p></div>
       <div class="g12 deliv"><div class="lbl"><span class="mono" style="color:var(--c)">Entregables</span></div><ul><li>Dirección visual</li><li>Símbolo y versiones</li><li>Patrón modular</li><li>Campaña en redes y web</li><li>Impresos</li><li>Branding físico del evento</li></ul></div>
     </div>
   </article>
@@ -882,11 +902,11 @@ dialog[open]{animation:open .8s var(--ease-io) both}
   <!-- OFICIO -->
   <section class="sec" id="oficio">
     <div class="wrap">
-      <div class="g12 head"><div class="k"><span class="rn" aria-hidden="true"><svg viewBox="0 0 104 104"><path d="M61.99 10.69A42.5 42.5 0 0 1 54 94.45M50 94.45A42.5 42.5 0 0 1 43.02 10.46" fill="none" stroke="currentColor" stroke-width="5"/></svg><b>O</b></span><span class="mono mute">Oficio</span></div><h2>IA en el proceso. Criterio en el resultado.</h2><p>La IA acelera la exploración y la producción. La dirección visual y la revisión final no se delegan.</p></div>
+      <div class="g12 head"><div class="k"><span class="rn" aria-hidden="true"><svg viewBox="0 0 104 104"><path d="M61.99 10.69A42.5 42.5 0 0 1 54 94.45M50 94.45A42.5 42.5 0 0 1 43.02 10.46" fill="none" stroke="currentColor" stroke-width="5"/></svg><b>O</b></span><span class="mono mute">Oficio</span></div><h2>IA en el proceso. Criterio en el resultado.</h2><p>La IA acelera la exploración y la producción. La dirección visual y la revisión final no se delegan. También lo enseña: como docente universitario forma a nuevos diseñadores en el uso de la IA dentro del proceso.</p></div>
       <div class="g12 flow">
         <div><span class="mono mute">Explorar</span><h3>Referentes y rutas de concepto</h3><p>Búsqueda y contraste de ideas antes de abrir el archivo de diseño.</p><div class="tools"><span>ChatGPT</span><span>Claude</span></div></div>
-        <div><span class="mono mute">Producir</span><h3>Recursos, escalado y gráficos</h3><p>Generación de recursos, escalado de imágenes y apoyo en gráficos de datos.</p><div class="tools"><span>Adobe Firefly</span><span>Nano Banana</span><span>Magnific</span><span>Antigravity</span></div></div>
-        <div class="me"><span class="mono">Dirigir</span><h3>Dirección visual y revisión final</h3><p>Lo que llega al cliente pasó por criterio propio, pieza por pieza.</p><div class="tools"><span>Figma</span><span>Canva</span></div></div>
+        <div><span class="mono mute">Producir</span><h3>Recursos, escalado y gráficos</h3><p>Generación de recursos, escalado de imágenes y apoyo en gráficos de datos.</p><div class="tools"><span>Adobe Firefly</span><span>Nano Banana</span><span>Magnific</span><span>IA de Adobe</span><span>Antigravity</span><span>Conectores con Figma</span></div></div>
+        <div class="me"><span class="mono">Dirigir</span><h3>Dirección visual y revisión final</h3><p>Lo que llega al cliente pasó por criterio propio, pieza por pieza.</p><div class="tools"><span>Photoshop</span><span>Illustrator</span><span>InDesign</span><span>Figma</span><span>Canva</span></div></div>
       </div>
       <div class="g12 steps">
         <div class="step"><div class="rule"></div><span class="mono mute">01</span><h4>Del brief al concepto</h4><p>Una idea que cabe en una frase: #PonteBacano, #SaboresQueUnen, Amor y Gratitud.</p></div>
@@ -906,26 +926,62 @@ dialog[open]{animation:open .8s var(--ease-io) both}
             <img src="assets/img/leyder-retrato-900.jpg" width="900" height="900" alt="Retrato de Leyder Hernández" loading="lazy" decoding="async" onerror="this.closest('.portrait').remove()">
             <svg viewBox="0 0 104 104" aria-hidden="true"><path class="pr" d="M61.99 10.69A42.5 42.5 0 0 1 54 94.45M50 94.45A42.5 42.5 0 0 1 43.02 10.46" pathLength="140"/></svg>
           </div>
-          <figcaption><span class="mono">Leyder Hernández Cervantes</span><span class="mono mute">Barranquilla, 2026</span></figcaption>
+          <figcaption><span class="mono">Leyder Hernández Cervantes</span><span class="mono mute">Diseñador · Docente</span></figcaption>
         </figure>
         <div class="txt">
-          <span class="mono mute">Perfil</span>
-          <p class="big rv" style="margin-top:18px">Diseñador gráfico desde 2018. Convierto briefs en conceptos y sistemas visuales que se adaptan a distintos formatos, canales y audiencias.</p>
-          <p class="sm">Experiencia en campañas, identidad visual, piezas para redes sociales, diseño editorial y video. Creo plantillas reutilizables en Figma y Canva para que los equipos produzcan con autonomía. Formación en gestión de proyectos y metodologías Agile.</p>
+          <div class="k" style="display:flex;align-items:center;gap:14px"><span class="rn" aria-hidden="true"><svg viewBox="0 0 104 104"><path d="M61.99 10.69A42.5 42.5 0 0 1 54 94.45M50 94.45A42.5 42.5 0 0 1 43.02 10.46" fill="none" stroke="currentColor" stroke-width="5"/></svg><b>P</b></span><span class="mono mute">Perfil</span></div>
+          <p class="big rv" style="margin-top:22px">Diseñador gráfico desde 2018. Acompaño a cada cliente desde entender lo que necesita hasta adaptar las piezas a cada público y formato.</p>
+          <p class="sm">Campañas, identidades visuales, contenidos editoriales y producción audiovisual. Integro la IA para apoyar la ideación, generar o ajustar recursos y agilizar tareas repetitivas, con la dirección visual y la revisión de cada resultado bajo mi criterio. Mi formación en gestión de proyectos y metodologías Agile respalda una forma de trabajo organizada e iterativa.</p>
+          <ul class="comp-list" aria-label="Competencias">
+            <li>Conceptos y propuestas visuales a partir de briefs</li>
+            <li>Identidad visual y branding de campañas y eventos</li>
+            <li>Piezas para redes sociales y campañas</li>
+            <li>Editorial: libros, ebooks, guías, presentaciones e infografías</li>
+            <li>Plantillas editables en Canva y Figma</li>
+            <li>Animación 2D, edición y producción audiovisual</li>
+          </ul>
         </div>
-        <dl>
-          <div><dt class="mono">Base</dt><dd>Barranquilla, Colombia</dd></div>
-          <div><dt class="mono">Disciplinas</dt><dd>Identidad · Campañas · Redes · Editorial · Video · Ilustración</dd></div>
-          <div><dt class="mono">Diseño</dt><dd>Figma · Canva</dd></div>
-          <div><dt class="mono">IA</dt><dd>ChatGPT · Claude · Adobe Firefly · Nano Banana · Magnific · Antigravity</dd></div>
-          <div><dt class="mono">Formación</dt><dd>Diseño gráfico · Gestión de proyectos y Agile</dd></div>
-        </dl>
       </div>
+
+      <div class="g12 cv">
+        <div class="lbl"><span class="mono" style="color:var(--fg)">Trayectoria</span><span class="mono mute">2018 a hoy</span></div>
+        <div class="list">
+          <div class="cv-row now"><span class="yr">2024 · hoy</span><h4>Docente universitario<span>Institución Universitaria de Barranquilla</span></h4><p>Programa de Diseño Gráfico, con énfasis en audiovisual y multimedia. Enseña a incorporar la IA en los procesos de diseño.</p></div>
+          <div class="cv-row"><span class="yr">2025 · 2026</span><h4>Diseñador gráfico<span>Alcaldía de Polonuevo · remoto</span></h4><p>Identidades y campañas para eventos y comunicación institucional, con piezas para redes, impresos, soportes físicos y animación 2D.</p></div>
+          <div class="cv-row"><span class="yr">2021 · 2023</span><h4>Archivista audiovisual<span>Universidad del Norte</span></h4><p>Diseñó e implementó sistemas para organizar y preservar el archivo audiovisual institucional.</p></div>
+          <div class="cv-row"><span class="yr">2020 · 2021</span><h4>Diseñador gráfico<span>Corporación Universitaria Americana</span></h4><p>Piezas para educación virtual, proyectos de identidad visual y plantillas reutilizables para el equipo de diseño.</p></div>
+          <div class="cv-row"><span class="yr">2018 · 2020</span><h4>Diseñador gráfico<span>Universidad del Norte</span></h4><p>Identidad visual, reportaje gráfico, edición fotográfica, video y animación 2D para contenidos institucionales.</p></div>
+          <div class="cv-row"><span class="yr">Independiente</span><h4>Proyectos propios<span>Clientes institucionales y editoriales</span></h4><p>Universidad del Atlántico, Casa de Teatro Ay Macondo y Petromil; libros para profesionales de la salud, tesis doctorales y plantillas para rendición de cuentas.</p></div>
+        </div>
+      </div>
+
+      <div class="g12 cv">
+        <div class="lbl"><span class="mono" style="color:var(--fg)">Formación</span></div>
+        <div class="list">
+          <div class="cv-row now"><span class="yr">2025 · en curso</span><h4>Maestría en Animación 3D<span>Universidad Europea</span></h4><p></p></div>
+          <div class="cv-row"><span class="yr">2025</span><h4>Experto Universitario en Gestión de Proyectos y Metodologías Agile<span>Universidad Europea</span></h4><p></p></div>
+          <div class="cv-row"><span class="yr">2023</span><h4>Profesional en Diseño Gráfico<span>Institución Universitaria de Barranquilla</span></h4><p></p></div>
+          <div class="cv-row"><span class="yr">2022</span><h4>Tecnólogo en Gestión Gráfica Multimedial<span>ITSA</span></h4><p></p></div>
+          <div class="cv-row"><span class="yr">2019</span><h4>Técnico Profesional en Producción Gráfica y Multimedial<span>ITSA</span></h4><p></p></div>
+        </div>
+      </div>
+
+      <div class="g12 cv">
+        <div class="lbl"><span class="mono" style="color:var(--fg)">Herramientas</span></div>
+        <div class="list tools-g">
+          <div class="cv-row"><span class="yr">Diseño</span><div class="tools"><span>Photoshop</span><span>Illustrator</span><span>InDesign</span><span>Figma</span><span>Canva</span></div></div>
+          <div class="cv-row"><span class="yr">Audiovisual</span><div class="tools"><span>Premiere Pro</span><span>After Effects</span><span>CapCut</span></div></div>
+          <div class="cv-row"><span class="yr">IA</span><div class="tools"><span>ChatGPT</span><span>Claude</span><span>Adobe Firefly</span><span>Nano Banana</span><span>Magnific</span><span>IA de Adobe</span></div></div>
+          <div class="cv-row"><span class="yr">Flujos</span><div class="tools"><span>Antigravity</span><span>Skills</span><span>Conectores con Figma</span></div></div>
+          <div class="cv-row"><span class="yr">3D y motores</span><div class="tools"><span>Blender</span><span>Maya</span><span>Unity</span><span>Unreal Engine</span><span>Adobe Substance</span></div></div>
+        </div>
+      </div>
+
       <div class="g12 figs">
-        <div><b data-count="2018">2018</b><span class="mono mute">Año de inicio</span></div>
-        <div><b data-count="12">12</b><span class="mono mute">Proyectos publicados</span></div>
-        <div><b data-count="176">176</b><span class="mono mute">Piezas en el portafolio</span></div>
-        <div><b data-count="3">3</b><span class="mono mute">Clientes institucionales</span></div>
+        <div><b>2018</b><span class="mono mute">Año de inicio</span></div>
+        <div><b>12</b><span class="mono mute">Proyectos publicados</span></div>
+        <div><b>176</b><span class="mono mute">Piezas en el portafolio</span></div>
+        <div><b>7</b><span class="mono mute">Organizaciones</span></div>
       </div>
     </div>
   </section>
@@ -1007,10 +1063,10 @@ const A=[
  {id:"pitalito-81",t:"Pitalito 81 años",y:2025,d:"Identidad · Campaña",cover:"05",client:"Alcaldía de Polonuevo",concept:"Tierra de manos que saben a tradición.",
   text:"Para celebrar los 81 años de Pitalito desarrollé una identidad inspirada en la tierra, el sabor y su gente. El bollo de yuca fue el punto de partida: una tradición que representa el trabajo y el legado de quienes lo preparan.",
   deliver:"Concepto, paleta y tipografías, elementos gráficos, afiche, programación, cuenta regresiva, merch",imgs:["05","06","01","02","03","04","07","08","09","10","11"]},
- {id:"joven-mania",t:"Joven Manía",y:2025,d:"Identidad · Lettering · Merch",cover:"00",client:"Semana de la Juventud de Polonuevo",concept:"Lettering propio, colores vivos y aire retro.",
+ {id:"joven-mania",t:"Joven Manía",y:2025,d:"Identidad · Lettering · Merch",cover:"00",client:"Alcaldía de Polonuevo · Semana de la Juventud",concept:"Lettering propio, colores vivos y aire retro.",
   text:"Para la Semana de la Juventud de Polonuevo 2025 desarrollé la identidad de Joven Manía con un lettering propio, colores vivos y recursos gráficos de aire retro. Llevé la propuesta a las piezas de difusión y a productos promocionales como camisetas, tulas y bolígrafos.",
   deliver:"Lettering, paleta y tipografías, elementos gráficos, tratamiento fotográfico, afiches, merch",imgs:["00","01","02","03","04","05"]},
- {id:"festival-cerdo-yuca",t:"Festival del Cerdo y la Yuca",y:2025,d:"Identidad · Campaña",cover:"00",client:"Quinta edición del festival",concept:"#SaboresQueUnen",
+ {id:"festival-cerdo-yuca",t:"Festival del Cerdo y la Yuca",y:2025,d:"Identidad · Campaña",cover:"00",client:"Alcaldía de Polonuevo · quinta edición",concept:"#SaboresQueUnen",ai:"Nano Banana para recrear la ambientación visual a partir de referentes.",
   text:"Para la quinta edición del Festival del Cerdo y la Yuca desarrollé la identidad visual bajo el concepto #SaboresQueUnen. La llevé a las piezas de campaña y difusión, la programación, las aplicaciones impresas y de branding.",
   deliver:"Logotipo y versiones, iconografía, texturas, campaña, programación, impresos",imgs:["00","01","03","02","04","05"]},
  {id:"mes-ninez",t:"Mes de la Niñez",y:2025,d:"Campaña · Ilustración",cover:"04",client:"Alcaldía de Polonuevo",concept:"Alimenta tu fuerza, activa tu sonrisa.",
@@ -1121,7 +1177,7 @@ function show(id,ev){const k=DL.findIndex(p=>p.id===id);if(k<0)return;op=k;const
   if(ev&&ev.clientX!==undefined&&!dlg.open){dlg.style.setProperty("--ox",ev.clientX+"px");dlg.style.setProperty("--oy",ev.clientY+"px");}
   $("#dlg-bar-t").textContent=`${p.t} · ${p.y}`;$("#dlg-k").textContent=`Archivo · ${p.d}`;
   $("#dlg-title").textContent=p.t;$("#dlg-concept").textContent=p.concept;$("#dlg-text").textContent=p.text;
-  $("#dlg-r").innerHTML=`<dl class="kv"><div><dt class="mono">Cliente</dt><dd>${p.client}</dd></div><div><dt class="mono">Año</dt><dd>${p.y}</dd></div><div><dt class="mono">Entregables</dt><dd>${p.deliver}</dd></div></dl>`;
+  $("#dlg-r").innerHTML=`<dl class="kv"><div><dt class="mono">Cliente</dt><dd>${p.client}</dd></div><div><dt class="mono">Año</dt><dd>${p.y}</dd></div><div><dt class="mono">Entregables</dt><dd>${p.deliver}</dd></div>${p.ai?`<div><dt class="mono">IA</dt><dd>${p.ai}</dd></div>`:""}</dl>`;
   $("#dlg-gal").innerHTML=p.imgs.map(n=>{const key=p.id+"-"+n,m=MAN[key];if(!m)return"";const w=(m.w/m.h>1.45||p.imgs.length===1);return im(key,`${p.t}, pieza`,{cls:w?"w":""});}).join("");
   $("#dlg-next-t").textContent=DL[(op+1)%DL.length].t;$("#dlg-scroll").scrollTop=0;
   if(!dlg.open){dlg.showModal();document.body.style.overflow="hidden";}}

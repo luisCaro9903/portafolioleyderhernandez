@@ -1,4 +1,4 @@
-# Portafolio Leyder Hernández · v4
+# Portafolio Leyder Hernández · v5
 
 Sitio estático. Abrir `index.html` en el navegador. No necesita build ni servidor.
 
@@ -7,6 +7,8 @@ Sitio estático. Abrir `index.html` en el navegador. No necesita build ni servid
 - `index.html`: todo el sitio (HTML, CSS y JS en un solo archivo, sin librerías).
 - `assets/img/`: 102 imágenes optimizadas. Nombre: `{proyecto}-{nn}-1200.jpg`. Las de gran formato también tienen `-2000.jpg` y se sirven con `srcset`.
 - Fuente de las imágenes: https://leyderh3.myportfolio.com (descargadas el 2026-11-06).
+- Retrato: `assets/img/leyder-retrato-900.jpg` (foto entregada por Leyder, recortada al círculo).
+- Trayectoria, formación, herramientas y uso de IA por proyecto: CV de Leyder (noviembre 2026).
 - Respaldo de la versión anterior: `../2026-11-06-portfolio-leyder-hernandez-v2-respaldo.html`.
 
 ## Curaduría
@@ -49,9 +51,11 @@ Un solo lenguaje: el monograma.
 
 Todo respeta `prefers-reduced-motion`. Las animaciones de entrada solo mueven el contenido. Nada queda invisible esperando el scroll.
 
-## Pendiente
+## Perfil
 
-- **Foto de perfil**: el espacio está listo en la sección Perfil (retrato dentro del anillo del monograma, blanco y negro que pasa a color al pasar el cursor). Guardar la foto original y procesarla a `assets/img/leyder-retrato-900.jpg` (900×900, recortada al círculo). Mientras no exista, la sección se reacomoda sin hueco.
+Retrato dentro del anillo del monograma (blanco y negro, pasa a color con el cursor; a color en pantallas táctiles). Debajo: trayectoria, formación y herramientas tomadas del CV, en el mismo formato de tabla editorial de los casos. La cifra "7 organizaciones" cuenta: Alcaldía de Polonuevo, Universidad del Norte, Corporación Universitaria Americana, Institución Universitaria de Barranquilla, Universidad del Atlántico, Casa de Teatro Ay Macondo y Petromil.
+
+## Pendiente
 
 - El brief llegó cortado en la sección 7 (microinteracciones). Si había requisitos después de ese punto, faltan por revisar.
 - Confirmar con Leyder la autorización para publicar sus datos de contacto antes de subir el sitio.
